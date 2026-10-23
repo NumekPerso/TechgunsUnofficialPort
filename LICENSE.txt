@@ -1,3 +1,44 @@
+Techguns Unofficial 1.20.1 Port License
+
+This project is an unofficial port of Techguns 2 to Minecraft 1.20.1, published with the permission of the
+original creator of Techguns, pWn3d_1337. It contains two kinds of work, under two sets of terms.
+
+PART A - Original Techguns content
+
+The code, models, textures, sounds and other assets that come from the original Techguns mod
+(https://github.com/pWn3d1337/Techguns2) belong to their original authors and remain under the original
+Techguns Mod License, reproduced in Part C. Nothing in this license changes the rights of the original authors.
+
+PART B - Port work (c) Numek
+
+The work made for this port (the adaptation to Minecraft 1.20.1 and Forge, new and rewritten systems,
+optimizations, tools and documentation) is (c) Numek. As required by the original creator, the source code of
+this port is publicly available.
+
+1) You may:
+* look at the code
+* copy code snippets
+* depend on this mod (e.g. as a library for add-ons) without redistributing it
+
+2) You may not:
+* Release modified versions of this port without permission from Numek
+  (forking is allowed to contribute to the project through Pull Requests)
+* Sell or reupload this port
+* Claim ownership of this port or of the original mod
+
+3) Contribution:
+* By submitting work to this project you grant Numek full rights to the submitted work, for use in this
+  project.
+
+4) Liability:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+OR OTHER DEALINGS IN THE SOFTWARE.
+
+PART C - Original Techguns Mod License (applies to the original Techguns content)
+
 Techguns Mod License
 
 1) You May:

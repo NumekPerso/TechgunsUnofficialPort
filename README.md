@@ -22,5 +22,5 @@ Requires **JDK 17**. Like the original repository, the Gradle wrapper is not inc
 
 ## License
 
-Same license as the original mod: see [LICENSE.txt](LICENSE.txt) (Techguns Mod License).
-All original Techguns code, models, textures and sounds belong to their original authors. 1.20.1 port by Numek.
+See [LICENSE.txt](LICENSE.txt): the original Techguns content stays under the original Techguns Mod License, the port work is (c) Numek.
+All original Techguns code, models, textures and sounds belong to their original authors.
