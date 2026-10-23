@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "pip",
+    "igi",
+    "pip"
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:gems/diamond"
+    },
+    "i": {
+      "tag": "forge:plates/iron"
+    },
+    "p": {
+      "tag": "forge:plates/carbon"
+    }
+  },
+  "result": {
+    "item": "techguns:upgrade_protection_3"
+  }
+}

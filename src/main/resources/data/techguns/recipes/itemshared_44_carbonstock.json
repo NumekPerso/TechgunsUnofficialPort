@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "iii",
+    " pp"
+  ],
+  "key": {
+    "i": {
+      "tag": "forge:plates/carbon"
+    },
+    "p": {
+      "tag": "forge:sheets/plastic"
+    }
+  },
+  "result": {
+    "item": "techguns:carbonstock"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "block/block",
+  "loader": "forge:obj",
+  "model": "techguns:models/block/reactionchamber.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "particle": "techguns:blocks/reactionchamber_controller"
+  }
+}

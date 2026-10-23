@@ -1,0 +1,10 @@
+{
+  "parent": "block/block",
+  "loader": "forge:obj",
+  "model": "techguns:models/block/charging_station_centered.obj",
+  "flip_v": true,
+  "emissive_ambient": false,
+  "textures": {
+    "particle": "techguns:blocks/charging_station"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "techguns:block/slimyladder",
+      "x": 90,
+      "y": 0
+    },
+    "facing=east": {
+      "model": "techguns:block/slimyladder",
+      "x": 90,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "techguns:block/slimyladder",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "techguns:block/slimyladder",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

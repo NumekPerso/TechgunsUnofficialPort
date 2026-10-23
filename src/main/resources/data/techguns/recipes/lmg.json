@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " gr",
+    "bfs",
+    " m "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "f": {
+      "item": "techguns:obsidiansteelreceiver"
+    },
+    "g": {
+      "tag": "forge:glass_panes"
+    },
+    "m": {
+      "item": "techguns:lmgmagazine"
+    },
+    "r": {
+      "tag": "forge:dusts/redstone"
+    },
+    "s": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:lmg"
+  }
+}

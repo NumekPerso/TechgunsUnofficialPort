@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:thompson"
+    },
+    {
+      "item": "techguns:smgmagazine"
+    }
+  ],
+  "result": {
+    "item": "techguns:thompson"
+  }
+}

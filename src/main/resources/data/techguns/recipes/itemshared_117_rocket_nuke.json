@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techguns:rocket"
+    },
+    {
+      "item": "techguns:tacticalnukewarhead"
+    }
+  ],
+  "result": {
+    "item": "techguns:rocket_nuke"
+  }
+}

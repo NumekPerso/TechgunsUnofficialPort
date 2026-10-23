@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "nnn",
+    "gsg",
+    "nnn"
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:glass_panes"
+    },
+    "n": {
+      "tag": "forge:nuggets/iron"
+    },
+    "s": {
+      "tag": "forge:dusts/glowstone"
+    }
+  },
+  "result": {
+    "item": "techguns:neonlights",
+    "count": 16
+  }
+}

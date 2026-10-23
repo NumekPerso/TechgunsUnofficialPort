@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "lcl",
+    "eae",
+    "lcl"
+  ],
+  "key": {
+    "a": {
+      "item": "techguns:antigravcore"
+    },
+    "c": {
+      "item": "techguns:coil"
+    },
+    "e": {
+      "item": "techguns:enricheduranium"
+    },
+    "l": {
+      "tag": "forge:plates/lead"
+    }
+  },
+  "result": {
+    "item": "techguns:plasmagenerator"
+  }
+}

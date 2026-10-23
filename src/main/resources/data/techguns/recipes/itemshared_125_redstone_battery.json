@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "nwn",
+    "nrn",
+    "nrn"
+  ],
+  "key": {
+    "n": {
+      "tag": "forge:nuggets/copper"
+    },
+    "r": {
+      "tag": "forge:dusts/redstone"
+    },
+    "w": {
+      "tag": "forge:wires/copper"
+    }
+  },
+  "result": {
+    "item": "techguns:redstone_battery",
+    "count": 2
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "lhl",
+    "p p"
+  ],
+  "key": {
+    "h": {
+      "item": "techguns:t2_combat_boots"
+    },
+    "l": {
+      "item": "techguns:treatedleather"
+    },
+    "p": {
+      "tag": "forge:plates/lead"
+    }
+  },
+  "result": {
+    "item": "techguns:t2_riot_boots"
+  }
+}

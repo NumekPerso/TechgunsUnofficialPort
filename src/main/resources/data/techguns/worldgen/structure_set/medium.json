@@ -1,0 +1,45 @@
+{
+  "structures": [
+    {
+      "structure": "techguns:alien_bug_nest",
+      "weight": 20
+    },
+    {
+      "structure": "techguns:police_station",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:survivor_hideout",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:orecluster_spike",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:orecluster_meteor_basis",
+      "weight": 5
+    },
+    {
+      "structure": "techguns:nether_altar_medium",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:nether_ghast_spawner",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:nether_orecluster_castle",
+      "weight": 1000
+    }
+  ],
+  "placement": {
+    "type": "techguns:tg_spread",
+    "size": "medium",
+    "salt": 1612345702,
+    "exclusion_zone": {
+      "other_set": "techguns:big",
+      "chunk_count": 4
+    }
+  }
+}

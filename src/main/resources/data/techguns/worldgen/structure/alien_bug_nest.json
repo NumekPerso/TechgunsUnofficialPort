@@ -1,0 +1,8 @@
+{
+  "type": "techguns:tg_structure",
+  "structure": "alien_bug_nest",
+  "biomes": "#techguns:has_structure/desert",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

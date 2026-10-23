@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "wrw",
+    "imi",
+    "wrw"
+  ],
+  "key": {
+    "i": {
+      "tag": "forge:ingots/iron"
+    },
+    "m": {
+      "item": "techguns:mechanicalpartsiron"
+    },
+    "r": {
+      "tag": "forge:dusts/redstone"
+    },
+    "w": {
+      "tag": "forge:wires/copper"
+    }
+  },
+  "result": {
+    "item": "techguns:electricengine"
+  }
+}

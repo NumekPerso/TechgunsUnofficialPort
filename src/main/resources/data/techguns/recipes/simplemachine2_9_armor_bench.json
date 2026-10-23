@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " c ",
+    "oeo",
+    "sos"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:crafting_table"
+    },
+    "e": {
+      "tag": "forge:gems/emerald"
+    },
+    "o": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "s": {
+      "tag": "forge:obsidian"
+    }
+  },
+  "result": {
+    "item": "techguns:armor_bench"
+  }
+}

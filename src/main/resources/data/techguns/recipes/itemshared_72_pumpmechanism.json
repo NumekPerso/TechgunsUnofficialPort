@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "nnn",
+    "gpg",
+    "nnn"
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:glass"
+    },
+    "n": {
+      "tag": "forge:nuggets/iron"
+    },
+    "p": {
+      "item": "minecraft:piston"
+    }
+  },
+  "result": {
+    "item": "techguns:pumpmechanism"
+  }
+}

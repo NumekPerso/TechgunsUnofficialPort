@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "sss",
+    "s s"
+  ],
+  "key": {
+    "s": {
+      "item": "techguns:steamarmorplate"
+    }
+  },
+  "result": {
+    "item": "techguns:steam_helmet"
+  }
+}

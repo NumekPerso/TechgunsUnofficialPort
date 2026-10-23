@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "techguns:block/oredrill_scaffold" },
+    "formed=true": { "model": "techguns:block/oredrill_scaffold_h" }
+  }
+}

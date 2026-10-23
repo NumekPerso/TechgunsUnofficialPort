@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " w ",
+    "wlw",
+    " w "
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:leather"
+    },
+    "w": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "result": {
+    "item": "techguns:heavycloth",
+    "count": 3
+  }
+}

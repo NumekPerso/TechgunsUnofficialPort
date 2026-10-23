@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "iri",
+    "ifi",
+    "sbs"
+  ],
+  "key": {
+    "b": {
+      "tag": "forge:storage_blocks/iron"
+    },
+    "f": {
+      "item": "minecraft:furnace"
+    },
+    "i": {
+      "tag": "forge:plates/iron"
+    },
+    "r": {
+      "tag": "forge:dusts/redstone"
+    },
+    "s": {
+      "item": "minecraft:stone_bricks"
+    }
+  },
+  "result": {
+    "item": "techguns:blast_furnace"
+  }
+}

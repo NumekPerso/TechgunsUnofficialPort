@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "dpc",
+    "brs",
+    "  e"
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:gaussbarrel"
+    },
+    "c": {
+      "tag": "forge:circuits/elite"
+    },
+    "d": {
+      "tag": "forge:gems/diamond"
+    },
+    "e": {
+      "item": "techguns:energycellempty"
+    },
+    "p": {
+      "tag": "forge:plates/titanium"
+    },
+    "r": {
+      "item": "techguns:carbonreceiver"
+    },
+    "s": {
+      "item": "techguns:carbonstock"
+    }
+  },
+  "result": {
+    "item": "techguns:gaussrifle",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

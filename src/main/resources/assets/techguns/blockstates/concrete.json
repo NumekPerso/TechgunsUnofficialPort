@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=concrete_brown_light": {
+      "model": "techguns:block/concrete_brown_light"
+    },
+    "type=concrete_grey": {
+      "model": "techguns:block/concrete_grey"
+    },
+    "type=concrete_grey_dark": {
+      "model": "techguns:block/concrete_grey_dark"
+    },
+    "type=concrete_brown_pipes": {
+      "model": "techguns:block/concrete_brown_pipes"
+    },
+    "type=concrete_brown_light_scaff": {
+      "model": "techguns:block/concrete_brown_light_scaff"
+    },
+    "type=concrete_brown": {
+      "model": "techguns:block/concrete_brown"
+    }
+  }
+}

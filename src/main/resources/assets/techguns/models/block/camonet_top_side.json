@@ -1,0 +1,77 @@
+{
+  "textures": {
+    "particle": "#0"
+  },
+  "elements": [
+    {
+      "name": "net_side",
+      "from": [
+        7,
+        0,
+        4
+      ],
+      "to": [
+        16,
+        1,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#0",
+          "uv": [
+            0,
+            0,
+            9,
+            1
+          ]
+        },
+        "east": {
+          "texture": "#0",
+          "uv": [
+            0,
+            0,
+            8,
+            1
+          ]
+        },
+        "south": {
+          "texture": "#0",
+          "uv": [
+            0,
+            0,
+            9,
+            1
+          ]
+        },
+        "west": {
+          "texture": "#0",
+          "uv": [
+            0,
+            0,
+            8,
+            1
+          ]
+        },
+        "up": {
+          "texture": "#0",
+          "uv": [
+            7,
+            4,
+            16,
+            12
+          ]
+        },
+        "down": {
+          "texture": "#0",
+          "uv": [
+            7,
+            4,
+            16,
+            12
+          ]
+        }
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout"
+}

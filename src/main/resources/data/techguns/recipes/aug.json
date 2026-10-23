@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "gpg",
+    "bfs",
+    "i m"
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "f": {
+      "item": "techguns:steelreceiver"
+    },
+    "g": {
+      "tag": "forge:glass_panes"
+    },
+    "i": {
+      "tag": "forge:sheets/plastic"
+    },
+    "m": {
+      "item": "techguns:assaultriflemagazine"
+    },
+    "p": {
+      "tag": "forge:plates/steel"
+    },
+    "s": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:aug"
+  }
+}

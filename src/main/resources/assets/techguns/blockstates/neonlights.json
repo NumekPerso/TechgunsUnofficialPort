@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "type=neontubes4_rotated": {
+      "model": "techguns:block/neontubes4_rotated"
+    },
+    "type=neontubes2_rotated": {
+      "model": "techguns:block/neontubes2_rotated"
+    },
+    "type=neontubes4": {
+      "model": "techguns:block/neontubes4"
+    },
+    "type=neonsquare_white": {
+      "model": "techguns:block/neonsquare_white"
+    },
+    "type=neontubes2": {
+      "model": "techguns:block/neontubes2"
+    }
+  }
+}

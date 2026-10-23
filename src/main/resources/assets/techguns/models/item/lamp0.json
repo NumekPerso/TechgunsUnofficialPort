@@ -1,0 +1,23 @@
+{
+  "parent": "techguns:item/lamp_inventory_yellow",
+  "overrides": [
+    {
+      "predicate": {
+        "techguns:variant": 1
+      },
+      "model": "techguns:item/lamp_inventory_white"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 2
+      },
+      "model": "techguns:item/lamp_inventory_yellow_lantern"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 3
+      },
+      "model": "techguns:item/lamp_inventory_white_lantern"
+    }
+  ]
+}

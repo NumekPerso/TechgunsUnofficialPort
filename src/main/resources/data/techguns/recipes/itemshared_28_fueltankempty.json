@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "p",
+    "g",
+    "p"
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:glass"
+    },
+    "p": {
+      "tag": "forge:sheets/plastic"
+    }
+  },
+  "result": {
+    "item": "techguns:fueltankempty",
+    "count": 4
+  }
+}

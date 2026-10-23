@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ww",
+    " w"
+  ],
+  "key": {
+    "w": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "techguns:woodstock"
+  }
+}

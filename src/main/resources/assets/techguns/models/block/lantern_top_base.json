@@ -1,0 +1,69 @@
+{
+  "textures": {
+    "0": "#side",
+    "1": "#top"
+  },
+  "elements": [
+    {
+      "name": "connector_up",
+      "from": [
+        6,
+        14,
+        6
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ],
+      "faces": {
+        "north": {
+          "texture": "#0",
+          "uv": [
+            9,
+            0,
+            13,
+            2
+          ]
+        },
+        "east": {
+          "texture": "#0",
+          "uv": [
+            9,
+            0,
+            13,
+            2
+          ]
+        },
+        "south": {
+          "texture": "#0",
+          "uv": [
+            9,
+            0,
+            13,
+            2
+          ]
+        },
+        "west": {
+          "texture": "#0",
+          "uv": [
+            8,
+            0,
+            12,
+            2
+          ]
+        },
+        "up": {
+          "texture": "#1",
+          "uv": [
+            6,
+            6,
+            10,
+            10
+          ]
+        }
+      }
+    }
+  ],
+  "render_type": "minecraft:cutout"
+}

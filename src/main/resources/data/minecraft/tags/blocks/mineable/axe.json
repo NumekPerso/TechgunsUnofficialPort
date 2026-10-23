@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "techguns:military_crate_ammo",
+    "techguns:military_crate_gun",
+    "techguns:military_crate_armor",
+    "techguns:military_crate_medical",
+    "techguns:military_crate_explosive",
+    "techguns:military_crate_generic_oak",
+    "techguns:military_crate_generic_jungle",
+    "techguns:military_crate_generic_birch",
+    "techguns:military_crate_generic_spruce"
+  ]
+}

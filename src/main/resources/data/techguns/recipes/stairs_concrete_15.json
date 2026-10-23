@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "b  ",
+    "bb ",
+    "bbb"
+  ],
+  "key": {
+    "b": {
+      "type": "forge:partial_nbt",
+      "item": "techguns:concrete",
+      "nbt": {
+        "BlockStateTag": {
+          "type": "concrete_brown_light"
+        }
+      }
+    }
+  },
+  "result": {
+    "item": "techguns:stairs_concrete_2",
+    "count": 6
+  }
+}

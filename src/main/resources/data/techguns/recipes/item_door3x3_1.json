@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "sps",
+    "ppp",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "tag": "forge:plates/iron"
+    },
+    "s": {
+      "item": "minecraft:piston"
+    }
+  },
+  "result": {
+    "item": "techguns:item_door3x3_1",
+    "count": 2
+  }
+}

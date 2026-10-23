@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "rhr",
+    "cec",
+    "gsg"
+  ],
+  "key": {
+    "c": {
+      "tag": "forge:circuits/basic"
+    },
+    "e": {
+      "item": "techguns:redstone_battery_empty"
+    },
+    "g": {
+      "tag": "forge:glass"
+    },
+    "h": {
+      "item": "techguns:heavycloth"
+    },
+    "r": {
+      "tag": "forge:rubber"
+    },
+    "s": {
+      "tag": "forge:ingots/iron"
+    }
+  },
+  "result": {
+    "item": "techguns:nightvisiongoggles",
+    "nbt": "{Damage:24000}"
+  }
+}

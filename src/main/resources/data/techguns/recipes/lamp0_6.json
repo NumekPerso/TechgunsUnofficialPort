@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "type": "forge:nbt",
+      "item": "techguns:lamp0"
+    }
+  ],
+  "result": {
+    "item": "techguns:lamp0",
+    "nbt": {
+      "BlockStateTag": {
+        "lamp_type": "white"
+      }
+    }
+  }
+}

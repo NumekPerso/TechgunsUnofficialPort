@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " p ",
+    "ers",
+    " c "
+  ],
+  "key": {
+    "c": {
+      "item": "techguns:energycellempty"
+    },
+    "e": {
+      "item": "techguns:sonicemitter"
+    },
+    "p": {
+      "tag": "forge:plates/titanium"
+    },
+    "r": {
+      "item": "techguns:carbonreceiver"
+    },
+    "s": {
+      "item": "techguns:carbonstock"
+    }
+  },
+  "result": {
+    "item": "techguns:sonicshotgun",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

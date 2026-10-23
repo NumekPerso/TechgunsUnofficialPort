@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "p ",
+    "pm",
+    "sf"
+  ],
+  "key": {
+    "f": {
+      "item": "techguns:fueltank"
+    },
+    "m": {
+      "item": "techguns:pumpmechanism"
+    },
+    "p": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "s": {
+      "tag": "forge:sheets/plastic"
+    }
+  },
+  "result": {
+    "item": "techguns:shishkebap"
+  }
+}

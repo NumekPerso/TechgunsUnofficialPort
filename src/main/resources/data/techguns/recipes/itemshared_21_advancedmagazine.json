@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techguns:advancedmagazineempty"
+    },
+    {
+      "item": "techguns:advancedrounds"
+    },
+    {
+      "item": "techguns:advancedrounds"
+    },
+    {
+      "item": "techguns:advancedrounds"
+    }
+  ],
+  "result": {
+    "item": "techguns:advancedmagazine"
+  }
+}

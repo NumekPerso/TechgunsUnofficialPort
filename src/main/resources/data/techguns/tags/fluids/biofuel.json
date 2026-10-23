@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "#forge:biofuel", "required": false }
+  ]
+}

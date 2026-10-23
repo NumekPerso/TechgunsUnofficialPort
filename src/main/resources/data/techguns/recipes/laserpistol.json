@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "obo",
+    "scr",
+    "ssp"
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:laserbarrel"
+    },
+    "c": {
+      "tag": "forge:circuits/elite"
+    },
+    "o": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "p": {
+      "tag": "forge:sheets/plastic"
+    },
+    "r": {
+      "item": "techguns:redstone_battery"
+    },
+    "s": {
+      "tag": "forge:nuggets/steel"
+    }
+  },
+  "result": {
+    "item": "techguns:laserpistol"
+  }
+}

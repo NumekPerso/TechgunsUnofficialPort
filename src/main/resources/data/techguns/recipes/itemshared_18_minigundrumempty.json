@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "sss",
+    "pmp",
+    "sss"
+  ],
+  "key": {
+    "m": {
+      "item": "techguns:mechanicalpartsobsidiansteel"
+    },
+    "p": {
+      "tag": "forge:sheets/plastic"
+    },
+    "s": {
+      "tag": "forge:ingots/steel"
+    }
+  },
+  "result": {
+    "item": "techguns:minigundrumempty",
+    "count": 4
+  }
+}

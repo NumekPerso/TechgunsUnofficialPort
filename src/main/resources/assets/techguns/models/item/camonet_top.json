@@ -1,0 +1,17 @@
+{
+  "parent": "techguns:item/camonet_top_wood",
+  "overrides": [
+    {
+      "predicate": {
+        "techguns:variant": 1
+      },
+      "model": "techguns:item/camonet_top_desert"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 2
+      },
+      "model": "techguns:item/camonet_top_snow"
+    }
+  ]
+}

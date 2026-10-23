@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:vector"
+    },
+    {
+      "item": "techguns:smgmagazine_incendiary"
+    }
+  ],
+  "result": {
+    "item": "techguns:vector"
+  }
+}

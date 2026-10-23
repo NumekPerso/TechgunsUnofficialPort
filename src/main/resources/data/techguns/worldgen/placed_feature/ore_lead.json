@@ -1,0 +1,31 @@
+{
+  "feature": "techguns:ore_lead",
+  "placement": [
+    {
+      "type": "techguns:ore_config",
+      "ore": "lead"
+    },
+    {
+      "type": "minecraft:count",
+      "count": 8
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "absolute": 5
+        },
+        "max_inclusive": {
+          "absolute": 49
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

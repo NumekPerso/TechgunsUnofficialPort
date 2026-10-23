@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:grimreaper"
+    },
+    {
+      "item": "techguns:rocket"
+    }
+  ],
+  "result": {
+    "item": "techguns:grimreaper"
+  }
+}

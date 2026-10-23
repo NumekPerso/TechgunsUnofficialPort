@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "techguns:stairs_metal",
+    "techguns:stairs_metal_2",
+    "techguns:stairs_concrete",
+    "techguns:stairs_concrete_2"
+  ]
+}

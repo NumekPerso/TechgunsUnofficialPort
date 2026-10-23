@@ -1,0 +1,35 @@
+{
+  "parent": "techguns:block/concrete_brown",
+  "overrides": [
+    {
+      "predicate": {
+        "techguns:variant": 1
+      },
+      "model": "techguns:block/concrete_brown_light"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 2
+      },
+      "model": "techguns:block/concrete_grey"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 3
+      },
+      "model": "techguns:block/concrete_grey_dark"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 4
+      },
+      "model": "techguns:block/concrete_brown_pipes"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 5
+      },
+      "model": "techguns:block/concrete_brown_light_scaff"
+    }
+  ]
+}

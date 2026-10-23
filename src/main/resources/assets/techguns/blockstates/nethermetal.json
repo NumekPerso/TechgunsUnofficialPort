@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "type=grey": {
+      "model": "techguns:block/nethermetal_grey"
+    },
+    "type=panel": {
+      "model": "techguns:block/nethermetal_panel"
+    },
+    "type=grey_dark": {
+      "model": "techguns:block/nethermetal_grey_dark"
+    },
+    "type=grate2": {
+      "model": "techguns:block/nethermetal_grate2"
+    },
+    "type=grate1": {
+      "model": "techguns:block/nethermetal_grate1"
+    },
+    "type=grey_tiles": {
+      "model": "techguns:block/nethermetal_grey_tiles"
+    },
+    "type=border_red": {
+      "model": "techguns:block/nethermetal_border_red"
+    },
+    "type=plate_black": {
+      "model": "techguns:block/nethermetal_plate_black"
+    },
+    "type=plate_red": {
+      "model": "techguns:block/nethermetal_plate_red"
+    },
+    "type=border_lava": {
+      "model": "techguns:block/nethermetal_border_lava"
+    }
+  }
+}

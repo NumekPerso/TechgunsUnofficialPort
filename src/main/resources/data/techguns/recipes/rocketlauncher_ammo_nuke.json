@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:rocketlauncher"
+    },
+    {
+      "item": "techguns:rocket_nuke"
+    }
+  ],
+  "result": {
+    "item": "techguns:rocketlauncher"
+  }
+}

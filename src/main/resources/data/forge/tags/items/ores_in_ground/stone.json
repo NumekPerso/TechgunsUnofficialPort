@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "techguns:ore_copper",
+    "techguns:ore_tin",
+    "techguns:ore_lead",
+    "techguns:ore_titanium",
+    "techguns:ore_uranium"
+  ]
+}

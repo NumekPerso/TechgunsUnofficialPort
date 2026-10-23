@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techguns:rifleroundsstack"
+    }
+  ],
+  "result": {
+    "item": "techguns:riflerounds",
+    "count": 4
+  }
+}

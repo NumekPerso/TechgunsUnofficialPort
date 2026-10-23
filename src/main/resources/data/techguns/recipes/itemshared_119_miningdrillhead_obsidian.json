@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " dd",
+    "ddd",
+    " dd"
+  ],
+  "key": {
+    "d": {
+      "tag": "forge:plates/obsidian_steel"
+    }
+  },
+  "result": {
+    "item": "techguns:miningdrillhead_obsidian"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "techguns:stairs_metal_2"
+    }
+  ],
+  "result": {
+    "item": "techguns:metalpanel",
+    "nbt": {
+      "BlockStateTag": {
+        "type": "steelframe_dark"
+      }
+    }
+  }
+}

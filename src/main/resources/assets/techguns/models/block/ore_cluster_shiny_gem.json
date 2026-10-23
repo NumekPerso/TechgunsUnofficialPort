@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "techguns:blocks/ore_cluster_shiny_gem"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "fff",
+    "ggl",
+    "fff"
+  ],
+  "key": {
+    "f": {
+      "type": "techguns:electrum_or_gold"
+    },
+    "g": {
+      "type": "techguns:hardened_glass_or_glass"
+    },
+    "l": {
+      "item": "techguns:laserfocus"
+    }
+  },
+  "result": {
+    "item": "techguns:laserbarrel"
+  }
+}

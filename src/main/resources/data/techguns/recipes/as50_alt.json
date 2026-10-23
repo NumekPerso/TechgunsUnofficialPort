@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "dpd",
+    "bbf",
+    " mt"
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "d": {
+      "tag": "forge:gems/diamond"
+    },
+    "f": {
+      "item": "techguns:obsidiansteelreceiver"
+    },
+    "m": {
+      "item": "techguns:as50magazineempty"
+    },
+    "p": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "t": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:as50",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

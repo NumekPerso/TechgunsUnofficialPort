@@ -1,0 +1,1348 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "type": "wood",
+        "connection": "none"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "w"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "w"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "s"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "s"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "e"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "e"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "ew"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_full_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "n"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "n"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "ns"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_full_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_wood"
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "wood",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_wood",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "none"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "w"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "w"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "s"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "s"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "e"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "e"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "ew"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_full_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "n"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "n"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "ns"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_full_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_desert"
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "desert",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_desert",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "none"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "w"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "w"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "s"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "s"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "sw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "e"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "e"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "ew"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_full_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "es"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "esw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "n"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "n"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "ns"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_full_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nsw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "ne"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "new"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 180,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nes"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_stick_snow"
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 90,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "type": "snow",
+        "connection": "nesw"
+      },
+      "apply": {
+        "model": "techguns:block/camonet_half_snow",
+        "y": 180,
+        "uvlock": true
+      }
+    }
+  ]
+}

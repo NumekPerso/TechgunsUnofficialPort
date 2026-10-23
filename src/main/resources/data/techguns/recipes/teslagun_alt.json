@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " gd",
+    "crs",
+    " e "
+  ],
+  "key": {
+    "c": {
+      "item": "techguns:coil"
+    },
+    "d": {
+      "tag": "forge:dusts/redstone"
+    },
+    "e": {
+      "item": "techguns:energycellempty"
+    },
+    "g": {
+      "tag": "forge:glass_panes"
+    },
+    "r": {
+      "item": "techguns:carbonreceiver"
+    },
+    "s": {
+      "item": "techguns:carbonstock"
+    }
+  },
+  "result": {
+    "item": "techguns:teslagun",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

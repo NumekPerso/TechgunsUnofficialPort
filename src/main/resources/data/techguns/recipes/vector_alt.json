@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " gd",
+    "brs",
+    " m "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "d": {
+      "tag": "forge:dusts/redstone"
+    },
+    "g": {
+      "tag": "forge:glass_panes"
+    },
+    "m": {
+      "item": "techguns:smgmagazineempty"
+    },
+    "r": {
+      "item": "techguns:obsidiansteelreceiver"
+    },
+    "s": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:vector",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

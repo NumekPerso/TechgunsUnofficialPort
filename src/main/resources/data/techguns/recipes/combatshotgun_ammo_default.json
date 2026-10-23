@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:combatshotgun"
+    },
+    {
+      "item": "techguns:shotgunrounds"
+    }
+  ],
+  "result": {
+    "item": "techguns:combatshotgun"
+  }
+}

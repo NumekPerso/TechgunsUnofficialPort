@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "techguns:ore_lead"
+  },
+  "result": "techguns:ingotlead",
+  "experience": 1,
+  "cookingtime": 100
+}

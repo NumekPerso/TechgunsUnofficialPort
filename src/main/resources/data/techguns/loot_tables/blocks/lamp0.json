@@ -1,0 +1,91 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "techguns:lamp0",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:lamp0",
+                  "properties": {
+                    "lamp_type": "yellow"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:lamp0",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:lamp0",
+                  "properties": {
+                    "lamp_type": "white"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{lamp_type:\"white\"}}"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:lamp0",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:lamp0",
+                  "properties": {
+                    "lamp_type": "yellow_lantern"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{lamp_type:\"yellow_lantern\"}}"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:lamp0",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:lamp0",
+                  "properties": {
+                    "lamp_type": "white_lantern"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{lamp_type:\"white_lantern\"}}"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "iii",
+    " mn",
+    "  n"
+  ],
+  "key": {
+    "i": {
+      "tag": "forge:ingots/steel"
+    },
+    "m": {
+      "item": "techguns:mechanicalpartsobsidiansteel"
+    },
+    "n": {
+      "tag": "forge:nuggets/steel"
+    }
+  },
+  "result": {
+    "item": "techguns:steelreceiver"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "techguns:ore_copper"
+  },
+  "result": "techguns:ingotcopper",
+  "experience": 0.5,
+  "cookingtime": 100
+}

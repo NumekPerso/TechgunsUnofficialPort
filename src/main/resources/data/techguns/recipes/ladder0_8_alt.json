@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "iii",
+    " i ",
+    "iii"
+  ],
+  "key": {
+    "i": {
+      "tag": "forge:plates/tin"
+    }
+  },
+  "result": {
+    "item": "techguns:ladder0",
+    "count": 16
+  }
+}

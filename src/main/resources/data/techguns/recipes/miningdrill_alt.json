@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " m ",
+    "drs",
+    " f "
+  ],
+  "key": {
+    "d": {
+      "item": "techguns:miningdrillhead_obsidian"
+    },
+    "f": {
+      "item": "techguns:fueltankempty"
+    },
+    "m": {
+      "item": "techguns:mechanicalpartscarbon"
+    },
+    "r": {
+      "item": "techguns:obsidiansteelreceiver"
+    },
+    "s": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:miningdrill",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b,miningHead:0}"
+  }
+}

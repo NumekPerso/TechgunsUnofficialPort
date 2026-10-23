@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "rtr",
+    "tct",
+    "rtr"
+  ],
+  "key": {
+    "c": {
+      "tag": "forge:circuits/basic"
+    },
+    "r": {
+      "tag": "forge:sheets/plastic"
+    },
+    "t": {
+      "item": "techguns:tgx"
+    }
+  },
+  "result": {
+    "item": "techguns:explosive_charge_advanced",
+    "count": 4
+  }
+}

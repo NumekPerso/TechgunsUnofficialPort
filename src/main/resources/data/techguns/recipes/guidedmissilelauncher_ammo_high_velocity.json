@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:guidedmissilelauncher"
+    },
+    {
+      "item": "techguns:rocket_high_velocity"
+    }
+  ],
+  "result": {
+    "item": "techguns:guidedmissilelauncher"
+  }
+}

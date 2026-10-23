@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "cwc",
+    "plp",
+    "plp"
+  ],
+  "key": {
+    "c": {
+      "tag": "forge:circuits/elite"
+    },
+    "l": {
+      "item": "minecraft:redstone_lamp"
+    },
+    "p": {
+      "tag": "forge:plates/steel"
+    },
+    "w": {
+      "tag": "forge:wires/gold"
+    }
+  },
+  "result": {
+    "item": "techguns:rcheatray"
+  }
+}

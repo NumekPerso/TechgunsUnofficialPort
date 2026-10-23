@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techguns:smgmagazineempty"
+    },
+    {
+      "item": "techguns:pistolrounds"
+    },
+    {
+      "item": "techguns:pistolrounds"
+    }
+  ],
+  "result": {
+    "item": "techguns:smgmagazine"
+  }
+}

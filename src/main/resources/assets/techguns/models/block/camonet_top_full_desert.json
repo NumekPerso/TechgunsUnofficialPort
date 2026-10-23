@@ -1,0 +1,7 @@
+{
+  "parent": "techguns:block/camonet_top_full",
+  "textures": {
+    "0": "techguns:blocks/camonet_desert",
+    "particle": "techguns:blocks/camonet_desert"
+  }
+}

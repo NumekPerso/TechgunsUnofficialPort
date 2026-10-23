@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " pi",
+    "bri",
+    " m "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "i": {
+      "tag": "forge:nuggets/iron"
+    },
+    "m": {
+      "item": "techguns:smgmagazine"
+    },
+    "p": {
+      "tag": "forge:sheets/plastic"
+    },
+    "r": {
+      "item": "techguns:steelreceiver"
+    }
+  },
+  "result": {
+    "item": "techguns:mac10"
+  }
+}

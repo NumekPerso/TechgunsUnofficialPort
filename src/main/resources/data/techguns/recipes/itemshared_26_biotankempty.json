@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "sss",
+    "sgs",
+    "sgs"
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:glass"
+    },
+    "s": {
+      "tag": "forge:nuggets/steel"
+    }
+  },
+  "result": {
+    "item": "techguns:biotankempty"
+  }
+}

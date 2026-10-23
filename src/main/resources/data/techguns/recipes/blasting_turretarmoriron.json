@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "techguns:turretarmoriron"
+  },
+  "result": {
+    "item": "minecraft:iron_ingot",
+    "count": 5
+  },
+  "experience": 0,
+  "cookingtime": 100
+}

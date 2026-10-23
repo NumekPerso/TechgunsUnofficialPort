@@ -1,0 +1,18 @@
+{
+  "type": "techguns:miningtool_upgrade",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "type": "techguns:itemstack_has_nbt_int",
+      "item": "techguns:powerhammer",
+      "key": "miningHead",
+      "value": 1
+    },
+    {
+      "item": "techguns:powerhammerhead_carbon"
+    }
+  ],
+  "result": {
+    "item": "techguns:powerhammer"
+  }
+}

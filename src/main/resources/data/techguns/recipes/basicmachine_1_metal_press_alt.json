@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "ibi",
+    "iei",
+    "iri"
+  ],
+  "key": {
+    "b": {
+      "tag": "forge:plates/iron"
+    },
+    "e": {
+      "item": "techguns:electricengine"
+    },
+    "i": {
+      "tag": "forge:ingots/iron"
+    },
+    "r": {
+      "tag": "forge:dusts/redstone"
+    }
+  },
+  "result": {
+    "item": "techguns:metal_press"
+  }
+}

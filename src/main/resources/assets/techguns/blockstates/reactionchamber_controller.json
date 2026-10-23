@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,formed=false": { "model": "techguns:block/reactionchamber_controller", "y": 180 },
+    "facing=south,formed=false": { "model": "techguns:block/reactionchamber_controller" },
+    "facing=west,formed=false": { "model": "techguns:block/reactionchamber_controller", "y": 270 },
+    "facing=east,formed=false": { "model": "techguns:block/reactionchamber_controller", "y": 90 },
+    "facing=north,formed=true": { "model": "techguns:block/reactionchamber_formed", "y": 180 },
+    "facing=south,formed=true": { "model": "techguns:block/reactionchamber_formed" },
+    "facing=west,formed=true": { "model": "techguns:block/reactionchamber_formed", "y": 90 },
+    "facing=east,formed=true": { "model": "techguns:block/reactionchamber_formed", "y": 270 }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:sawedoff"
+    },
+    {
+      "item": "techguns:shotgunrounds_incendiary"
+    }
+  ],
+  "result": {
+    "item": "techguns:sawedoff"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "techguns:stairs_concrete_2"
+    }
+  ],
+  "result": {
+    "item": "techguns:concrete",
+    "nbt": {
+      "BlockStateTag": {
+        "type": "concrete_brown_light"
+      }
+    }
+  }
+}

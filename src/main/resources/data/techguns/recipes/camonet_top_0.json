@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "wdw",
+    "dsd",
+    "wdw"
+  ],
+  "key": {
+    "d": {
+      "item": "minecraft:dirt"
+    },
+    "s": {
+      "tag": "forge:string"
+    },
+    "w": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "techguns:camonet_top",
+    "count": 16
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "techguns:block/reactionchamber_housing" },
+    "formed=true": { "model": "techguns:block/reactionchamber_housing_formed" }
+  }
+}

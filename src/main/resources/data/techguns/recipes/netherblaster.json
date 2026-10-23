@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "cpc",
+    "bns",
+    "cpc"
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "c": {
+      "item": "techguns:cyberneticparts"
+    },
+    "n": {
+      "item": "techguns:nethercharge"
+    },
+    "p": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "s": {
+      "item": "techguns:pumpmechanism"
+    }
+  },
+  "result": {
+    "item": "techguns:netherblaster"
+  }
+}

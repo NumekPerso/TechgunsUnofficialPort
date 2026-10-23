@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "#techguns:machines",
+    "techguns:ore_copper",
+    "techguns:ore_tin",
+    "techguns:ore_lead",
+    "techguns:ore_titanium",
+    "techguns:ore_uranium",
+    "techguns:bugnest_eggs",
+    "techguns:metalpanel",
+    "techguns:nethermetal",
+    "techguns:concrete",
+    "techguns:ladder0",
+    "techguns:lamp0",
+    "techguns:stairs_metal",
+    "techguns:stairs_metal_2",
+    "techguns:stairs_concrete",
+    "techguns:stairs_concrete_2",
+    "techguns:bunkerdoor",
+    "techguns:door3x3"
+  ]
+}

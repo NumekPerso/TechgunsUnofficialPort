@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " bb",
+    " f "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "f": {
+      "item": "techguns:steelreceiver"
+    }
+  },
+  "result": {
+    "item": "techguns:rocketlauncher",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "pp",
+    "pp",
+    "pp"
+  ],
+  "key": {
+    "p": {
+      "tag": "forge:plates/iron"
+    }
+  },
+  "result": {
+    "item": "techguns:item_bunkerdoor",
+    "count": 2
+  }
+}

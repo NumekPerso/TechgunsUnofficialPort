@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " h",
+    "hh"
+  ],
+  "key": {
+    "h": {
+      "item": "techguns:heavycloth"
+    }
+  },
+  "result": {
+    "item": "techguns:workinggloves"
+  }
+}

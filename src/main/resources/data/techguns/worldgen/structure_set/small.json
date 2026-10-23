@@ -1,0 +1,49 @@
+{
+  "structures": [
+    {
+      "structure": "techguns:factory_house_small",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:small_trainstation",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:small_mine",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:gas_station",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:nether_altar_small",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:nether_soul_platform",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:nether_loot_01",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:nether_acid_hole",
+      "weight": 10
+    },
+    {
+      "structure": "techguns:nether_orecluster_small",
+      "weight": 10
+    }
+  ],
+  "placement": {
+    "type": "techguns:tg_spread",
+    "size": "small",
+    "salt": 1612345701,
+    "exclusion_zone": {
+      "other_set": "techguns:medium",
+      "chunk_count": 2
+    }
+  }
+}

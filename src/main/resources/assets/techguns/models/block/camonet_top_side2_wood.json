@@ -1,0 +1,7 @@
+{
+  "parent": "techguns:block/camonet_top_side2",
+  "textures": {
+    "0": "techguns:blocks/camonet",
+    "particle": "techguns:blocks/camonet"
+  }
+}

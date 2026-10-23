@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "f f",
+    "pgp",
+    "rmr"
+  ],
+  "key": {
+    "f": {
+      "item": "techguns:fueltank"
+    },
+    "g": {
+      "item": "techguns:jumppack"
+    },
+    "m": {
+      "item": "techguns:mechanicalpartsobsidiansteel"
+    },
+    "p": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "r": {
+      "item": "techguns:rocket"
+    }
+  },
+  "result": {
+    "item": "techguns:jetpack"
+  }
+}

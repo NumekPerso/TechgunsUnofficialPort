@@ -1,0 +1,10 @@
+{
+  "loader": "forge:obj",
+  "model": "techguns:models/block/hangar_door_down_upper.obj",
+  "flip_v": false,
+  "automatic_culling": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "techguns:blocks/hangar_door"
+  }
+}

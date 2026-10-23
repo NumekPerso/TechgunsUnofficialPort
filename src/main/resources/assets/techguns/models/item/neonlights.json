@@ -1,0 +1,29 @@
+{
+  "parent": "techguns:block/neontubes2",
+  "overrides": [
+    {
+      "predicate": {
+        "techguns:variant": 1
+      },
+      "model": "techguns:block/neontubes2_rotated"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 2
+      },
+      "model": "techguns:block/neontubes4"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 3
+      },
+      "model": "techguns:block/neontubes4_rotated"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 4
+      },
+      "model": "techguns:block/neonsquare_white"
+    }
+  ]
+}

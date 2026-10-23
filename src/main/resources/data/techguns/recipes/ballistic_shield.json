@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "igi",
+    "isi",
+    "iii"
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:glass_panes"
+    },
+    "i": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "result": {
+    "item": "techguns:ballistic_shield"
+  }
+}

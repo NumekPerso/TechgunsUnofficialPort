@@ -1,0 +1,18 @@
+{
+  "type": "techguns:miningtool_upgrade",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "type": "techguns:itemstack_has_nbt_int",
+      "item": "techguns:miningdrill",
+      "key": "miningHead",
+      "value": 0
+    },
+    {
+      "item": "techguns:miningdrillhead_carbon"
+    }
+  ],
+  "result": {
+    "item": "techguns:miningdrill"
+  }
+}

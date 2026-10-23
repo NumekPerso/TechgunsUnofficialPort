@@ -1,0 +1,262 @@
+package techguns.client.models.guns;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
+import techguns.client.render.TGRenderHelper;
+
+import techguns.client.models.TGModelRenderer;
+import net.minecraft.world.item.ItemDisplayContext;
+import net.minecraft.world.entity.Entity;
+import techguns.client.models.ModelMultipart;
+
+public class ModelMiningDrill extends ModelMultipart {
+
+	public TGModelRenderer Drill01;
+    public TGModelRenderer Drill02;
+    public TGModelRenderer Drill03;
+    public TGModelRenderer Drill04;
+    public TGModelRenderer Drill05;
+    public TGModelRenderer Drill06;
+    public TGModelRenderer Drill07;
+    public TGModelRenderer Drill08;
+    public TGModelRenderer Drill09;
+    public TGModelRenderer Drill010;
+    public TGModelRenderer Drill011;
+    public TGModelRenderer Shape9;
+    public TGModelRenderer Shape13;
+    public TGModelRenderer Shape15;
+    public TGModelRenderer Shape151;
+    public TGModelRenderer Shape131;
+    public TGModelRenderer Shape91;
+    public TGModelRenderer Shape31;
+    public TGModelRenderer Shape152;
+    public TGModelRenderer Shape32;
+    public TGModelRenderer Shape33;
+    public TGModelRenderer Shape34;
+    public TGModelRenderer Shape131_1;
+    public TGModelRenderer Shape132;
+    public TGModelRenderer Shape133;
+    public TGModelRenderer Shape92;
+    public TGModelRenderer Shape93;
+    public TGModelRenderer Shape134;
+    public TGModelRenderer Shape135;
+    public TGModelRenderer Shape136;
+    public TGModelRenderer Grip01;
+    public TGModelRenderer Grip02;
+    public TGModelRenderer Grip03;
+    public TGModelRenderer Grip03_1;
+    public TGModelRenderer Grip;
+    public TGModelRenderer Grip2_01;
+    public TGModelRenderer Grip2_02;
+    public TGModelRenderer Grip2_03;
+
+    public ModelMiningDrill() {
+        this.textureWidth = 64;
+        this.textureHeight = 64;
+        this.Shape33 = new TGModelRenderer(this, 0, 27);
+        this.Shape33.setRotationPoint(3.0F, -1.5F, -1.5F);
+        this.Shape33.addBox(0.0F, 0.0F, 0.0F, 3, 1, 4, 0.0F);
+        this.Drill011 = new TGModelRenderer(this, 48, 0);
+        this.Drill011.setRotationPoint(16.5F, 1.5F, 0.5F);
+        this.Drill011.addBox(0.0F, -0.5F, -0.5F, 1, 1, 1, 0.0F);
+        this.setRotation(Drill011, 0.7853981633974483F, 0.0F, 0.0F);
+        this.Shape32 = new TGModelRenderer(this, 1, 32);
+        this.Shape32.setRotationPoint(3.0F, 4.0F, -1.0F);
+        this.Shape32.addBox(0.0F, 0.0F, 0.0F, 3, 1, 3, 0.0F);
+        this.Shape135 = new TGModelRenderer(this, 0, 36);
+        this.Shape135.setRotationPoint(-9.0F, -2.0F, -1.5F);
+        this.Shape135.addBox(0.0F, 0.0F, 0.0F, 2, 1, 4, 0.0F);
+        this.Shape9 = new TGModelRenderer(this, 45, 25);
+        this.Shape9.setRotationPoint(5.0F, -0.5F, -3.0F);
+        this.Shape9.addBox(-1.0F, -4.0F, 0.0F, 1, 4, 7, 0.0F);
+        this.setRotation(Shape9, 0.0F, 0.0F, -0.39269908169872414F);
+        this.Shape31 = new TGModelRenderer(this, 0, 27);
+        this.Shape31.setRotationPoint(3.0F, 3.5F, -1.5F);
+        this.Shape31.addBox(0.0F, 0.0F, 0.0F, 3, 1, 4, 0.0F);
+        this.Drill06 = new TGModelRenderer(this, 17, 14);
+        this.Drill06.setRotationPoint(11.0F, 1.5F, 0.5F);
+        this.Drill06.addBox(0.0F, -3.0F, -3.0F, 2, 6, 6, 0.0F);
+        this.Shape134 = new TGModelRenderer(this, 0, 36);
+        this.Shape134.setRotationPoint(-1.5F, -1.9F, -1.5F);
+        this.Shape134.addBox(0.0F, 0.0F, 0.0F, 5, 1, 4, 0.0F);
+        this.Grip02 = new TGModelRenderer(this, 12, 14);
+        this.Grip02.setRotationPoint(-12.0F, -2.0F, -0.5F);
+        this.Grip02.addBox(0.0F, 0.0F, 0.0F, 3, 1, 2, 0.0F);
+        this.Drill07 = new TGModelRenderer(this, 0, 56);
+        this.Drill07.setRotationPoint(12.0F, 1.5F, 0.5F);
+        this.Drill07.addBox(0.0F, -2.0F, -2.0F, 2, 4, 4, 0.0F);
+        this.setRotation(Drill07, 0.7853981633974483F, 0.0F, 0.0F);
+        this.Shape13 = new TGModelRenderer(this, 24, 36);
+        this.Shape13.setRotationPoint(-9.0F, 3.0F, -1.5F);
+        this.Shape13.addBox(0.0F, 0.0F, 0.0F, 12, 1, 4, 0.0F);
+        this.Shape151 = new TGModelRenderer(this, 47, 0);
+        this.Shape151.setRotationPoint(-7.0F, -2.5F, -2.5F);
+        this.Shape151.addBox(0.0F, 0.0F, 0.0F, 1, 2, 6, 0.0F);
+        this.Shape34 = new TGModelRenderer(this, 1, 32);
+        this.Shape34.setRotationPoint(3.0F, -2.0F, -1.0F);
+        this.Shape34.addBox(0.0F, 0.0F, 0.0F, 3, 1, 3, 0.0F);
+        this.Shape92 = new TGModelRenderer(this, 13, 26);
+        this.Shape92.setRotationPoint(4.0F, -0.5F, -2.5F);
+        this.Shape92.addBox(0.0F, 0.0F, 0.0F, 2, 4, 6, 0.0F);
+        this.Shape132 = new TGModelRenderer(this, 0, 20);
+        this.Shape132.setRotationPoint(-6.0F, -2.0F, -1.5F);
+        this.Shape132.addBox(0.0F, 0.0F, 0.0F, 4, 1, 4, 0.0F);
+        this.Drill03 = new TGModelRenderer(this, 22, 50);
+        this.Drill03.setRotationPoint(8.0F, 1.5F, 0.5F);
+        this.Drill03.addBox(0.0F, -3.5F, -3.5F, 2, 7, 7, 0.0F);
+        this.setRotation(Drill03, 0.7853981633974483F, 0.0F, 0.0F);
+        this.Grip = new TGModelRenderer(this, 47, 42);
+        this.Grip.setRotationPoint(0.5F, 1.9F, 3.5F);
+        this.Grip.addBox(-1.0F, -1.0F, 0.0F, 1, 1, 5, 0.0F);
+        this.setRotation(Grip, 0.0F, -0.0F, 0.7853981633974483F);
+        this.Shape91 = new TGModelRenderer(this, 29, 23);
+        this.Shape91.setRotationPoint(4.0F, -0.5F, -3.0F);
+        this.Shape91.addBox(0.0F, 0.0F, 0.0F, 1, 6, 7, 0.0F);
+        this.Drill02 = new TGModelRenderer(this, 41, 48);
+        this.Drill02.setRotationPoint(6.0F, 1.5F, 0.5F);
+        this.Drill02.addBox(0.0F, -4.0F, -4.0F, 2, 8, 8, 0.0F);
+        this.setRotation(Drill02, 0.7853981633974483F, 0.0F, 0.0F);
+        this.Shape15 = new TGModelRenderer(this, 27, 9);
+        this.Shape15.setRotationPoint(-6.5F, -0.5F, -2.5F);
+        this.Shape15.addBox(0.0F, 0.0F, 0.0F, 11, 4, 6, 0.0F);
+        this.Drill08 = new TGModelRenderer(this, 0, 56);
+        this.Drill08.setRotationPoint(13.0F, 1.5F, 0.5F);
+        this.Drill08.addBox(0.0F, -2.0F, -2.0F, 2, 4, 4, 0.0F);
+        this.Shape131_1 = new TGModelRenderer(this, 10, 41);
+        this.Shape131_1.setRotationPoint(-9.0F, -1.0F, -2.0F);
+        this.Shape131_1.addBox(0.0F, 0.0F, 0.0F, 13, 4, 5, 0.0F);
+        this.Grip01 = new TGModelRenderer(this, 0, 10);
+        this.Grip01.setRotationPoint(-17.0F, 2.9F, -0.5F);
+        this.Grip01.addBox(0.0F, 0.0F, 0.0F, 9, 1, 2, 0.0F);
+        this.Grip2_03 = new TGModelRenderer(this, 0, 4);
+        this.Grip2_03.setRotationPoint(0.0F, -5.3F, -2.1F);
+        this.Grip2_03.addBox(0.0F, 0.0F, 0.0F, 1, 5, 1, 0.0F);
+        this.Drill09 = new TGModelRenderer(this, 56, 0);
+        this.Drill09.setRotationPoint(14.5F, 1.5F, 0.5F);
+        this.Drill09.addBox(0.0F, -1.0F, -1.0F, 2, 2, 2, 0.0F);
+        this.Grip03_1 = new TGModelRenderer(this, 39, 26);
+        this.Grip03_1.setRotationPoint(-15.8F, -0.6F, -0.43F);
+        this.Grip03_1.addBox(-4.0F, 0.0F, 0.0F, 4, 1, 2, 0.0F);
+        this.setRotation(Grip03_1, 0.0F, 0.0F, -1.265363707695889F);
+        this.Shape93 = new TGModelRenderer(this, 54, 49);
+        this.Shape93.setRotationPoint(0.5F, 0.9F, 2.5F);
+        this.Shape93.addBox(-1.5F, -1.5F, 0.0F, 3, 3, 2, 0.0F);
+        this.Shape136 = new TGModelRenderer(this, 0, 14);
+        this.Shape136.setRotationPoint(-5.5F, -2.5F, -1.0F);
+        this.Shape136.addBox(0.0F, 0.0F, 0.0F, 3, 1, 3, 0.0F);
+        this.Shape131 = new TGModelRenderer(this, 0, 50);
+        this.Shape131.setRotationPoint(-5.0F, 4.0F, -1.0F);
+        this.Shape131.addBox(0.0F, 0.0F, 0.0F, 8, 1, 3, 0.0F);
+        this.Grip03 = new TGModelRenderer(this, 39, 23);
+        this.Grip03.setRotationPoint(-12.0F, -2.0F, -0.45F);
+        this.Grip03.addBox(-4.0F, 0.0F, 0.0F, 4, 1, 2, 0.0F);
+        this.setRotation(Grip03, 0.0F, 0.0F, -0.36128315516282616F);
+        this.Drill04 = new TGModelRenderer(this, 22, 50);
+        this.Drill04.setRotationPoint(9.0F, 1.5F, 0.5F);
+        this.Drill04.addBox(0.0F, -3.5F, -3.5F, 2, 7, 7, 0.0F);
+        this.Drill010 = new TGModelRenderer(this, 56, 0);
+        this.Drill010.setRotationPoint(14.0F, 1.5F, 0.5F);
+        this.Drill010.addBox(0.0F, -1.0F, -1.0F, 2, 2, 2, 0.0F);
+        this.setRotation(Drill010, 0.7853981633974483F, 0.0F, 0.0F);
+        this.Shape152 = new TGModelRenderer(this, 47, 0);
+        this.Shape152.setRotationPoint(-2.0F, -2.5F, -2.5F);
+        this.Shape152.addBox(0.0F, 0.0F, 0.0F, 1, 2, 6, 0.0F);
+        this.Grip2_01 = new TGModelRenderer(this, 47, 42);
+        this.Grip2_01.setRotationPoint(0.5F, -4.5F, -2.0F);
+        this.Grip2_01.addBox(-1.0F, -1.0F, 0.0F, 1, 1, 5, 0.0F);
+        this.setRotation(Grip2_01, 0.0F, -0.0F, 0.7853981633974483F);
+        this.Shape133 = new TGModelRenderer(this, 0, 41);
+        this.Shape133.setRotationPoint(-10.0F, -1.5F, -1.5F);
+        this.Shape133.addBox(0.0F, 0.0F, 0.0F, 1, 5, 4, 0.0F);
+        this.Drill01 = new TGModelRenderer(this, 41, 48);
+        this.Drill01.setRotationPoint(7.0F, 1.5F, 0.5F);
+        this.Drill01.addBox(0.0F, -4.0F, -4.0F, 2, 8, 8, 0.0F);
+        this.Drill05 = new TGModelRenderer(this, 17, 14);
+        this.Drill05.setRotationPoint(10.0F, 1.5F, 0.5F);
+        this.Drill05.addBox(0.0F, -3.0F, -3.0F, 2, 6, 6, 0.0F);
+        this.setRotation(Drill05, 0.7853981633974483F, 0.0F, 0.0F);
+        this.Grip2_02 = new TGModelRenderer(this, 0, 4);
+        this.Grip2_02.setRotationPoint(0.0F, -5.3F, 2.1F);
+        this.Grip2_02.addBox(0.0F, 0.0F, 0.0F, 1, 5, 1, 0.0F);
+    }
+
+	@Override
+	public void render(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw,
+			float headPitch, float scale, int ammoLeft, float reloadProgress, ItemDisplayContext transformType, int part,
+			float fireProgress, float chargeProgress) {
+		if (part==0) {
+			this.Shape93.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape136.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape134.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Grip01.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape13.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape151.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			poseStack.pushPose();
+			poseStack.translate(this.Grip.offsetX, this.Grip.offsetY, this.Grip.offsetZ);
+			poseStack.translate(this.Grip.rotationPointX * scale, this.Grip.rotationPointY * scale, this.Grip.rotationPointZ * scale);
+			poseStack.scale(1.5F, 1.5F, 1.0F);
+			poseStack.translate(-this.Grip.offsetX, -this.Grip.offsetY, -this.Grip.offsetZ);
+			poseStack.translate(-this.Grip.rotationPointX * scale, -this.Grip.rotationPointY * scale,
+					-this.Grip.rotationPointZ * scale);
+			this.Grip.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			poseStack.popPose();
+			this.Shape9.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape92.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape152.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			poseStack.pushPose();
+			poseStack.translate(this.Grip03.offsetX, this.Grip03.offsetY, this.Grip03.offsetZ);
+			poseStack.translate(this.Grip03.rotationPointX * scale, this.Grip03.rotationPointY * scale,
+					this.Grip03.rotationPointZ * scale);
+			poseStack.scale(1.0F, 1.0F, 0.98F);
+			poseStack.translate(-this.Grip03.offsetX, -this.Grip03.offsetY, -this.Grip03.offsetZ);
+			poseStack.translate(-this.Grip03.rotationPointX * scale, -this.Grip03.rotationPointY * scale,
+					-this.Grip03.rotationPointZ * scale);
+			this.Grip03.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			poseStack.popPose();
+			this.Shape15.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Grip02.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape131_1.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape34.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Grip2_03.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape32.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape135.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape33.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape132.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape131.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape91.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			poseStack.pushPose();
+			poseStack.translate(this.Grip03_1.offsetX, this.Grip03_1.offsetY, this.Grip03_1.offsetZ);
+			poseStack.translate(this.Grip03_1.rotationPointX * scale, this.Grip03_1.rotationPointY * scale,
+					this.Grip03_1.rotationPointZ * scale);
+			poseStack.scale(1.0F, 1.0F, 0.96F);
+			poseStack.translate(-this.Grip03_1.offsetX, -this.Grip03_1.offsetY, -this.Grip03_1.offsetZ);
+			poseStack.translate(-this.Grip03_1.rotationPointX * scale, -this.Grip03_1.rotationPointY * scale,
+					-this.Grip03_1.rotationPointZ * scale);
+			this.Grip03_1.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			poseStack.popPose();
+			this.Grip2_02.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape133.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Grip2_01.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Shape31.render(poseStack, buffer, packedLight, packedOverlay, scale);
+		} else if (part==1) {
+			poseStack.pushPose();
+			poseStack.translate(0,0.1d,0.04d);
+			TGRenderHelper.rotate(poseStack, 360f*fireProgress, 1, 0, 0);
+			poseStack.translate(0,-0.1d,-0.04d);
+			this.Drill01.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill02.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill03.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill04.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill05.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill06.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill07.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill08.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill09.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill010.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			this.Drill011.render(poseStack, buffer, packedLight, packedOverlay, scale);
+			poseStack.popPose();
+		}
+		
+	}
+
+}

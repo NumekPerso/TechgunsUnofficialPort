@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "gpd",
+    "brs",
+    " m "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "d": {
+      "tag": "forge:gems/diamond"
+    },
+    "g": {
+      "type": "techguns:hardened_glass_or_glass"
+    },
+    "m": {
+      "item": "techguns:assaultriflemagazineempty"
+    },
+    "p": {
+      "tag": "forge:sheets/plastic"
+    },
+    "r": {
+      "item": "techguns:obsidiansteelreceiver"
+    },
+    "s": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:scar",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "bfs",
+    "i  "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "f": {
+      "item": "techguns:steelreceiver"
+    },
+    "i": {
+      "tag": "forge:ingots/steel"
+    },
+    "s": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:combatshotgun",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

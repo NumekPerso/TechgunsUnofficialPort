@@ -1,0 +1,8 @@
+{
+  "type": "techguns:tg_structure",
+  "structure": "nether_ghast_spawner",
+  "biomes": "#techguns:has_structure/nether",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

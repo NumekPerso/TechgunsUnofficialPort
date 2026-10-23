@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:goldenrevolver"
+    },
+    {
+      "item": "techguns:pistolrounds"
+    }
+  ],
+  "result": {
+    "item": "techguns:goldenrevolver"
+  }
+}

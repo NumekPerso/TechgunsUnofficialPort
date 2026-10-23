@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "clc",
+    "cgc",
+    "ccc"
+  ],
+  "key": {
+    "c": {
+      "tag": "forge:nuggets/copper"
+    },
+    "g": {
+      "item": "minecraft:gunpowder"
+    },
+    "l": {
+      "tag": "forge:ingots/lead"
+    }
+  },
+  "result": {
+    "item": "techguns:pistolrounds",
+    "count": 8
+  }
+}

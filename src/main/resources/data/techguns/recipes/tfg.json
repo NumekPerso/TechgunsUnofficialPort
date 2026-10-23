@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "t  ",
+    "bpr",
+    "tn "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:shieldedtitaniumbarrel"
+    },
+    "n": {
+      "item": "techguns:nuclearpowercell"
+    },
+    "p": {
+      "item": "techguns:plasmagenerator"
+    },
+    "r": {
+      "item": "techguns:titaniumreceiver"
+    },
+    "t": {
+      "tag": "forge:plates/titanium"
+    }
+  },
+  "result": {
+    "item": "techguns:tfg"
+  }
+}

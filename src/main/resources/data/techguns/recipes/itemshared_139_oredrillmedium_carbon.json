@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "d d",
+    " d "
+  ],
+  "key": {
+    "d": {
+      "item": "techguns:oredrillsmall_carbon"
+    }
+  },
+  "result": {
+    "item": "techguns:oredrillmedium_carbon"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "techguns:tg_structure",
+  "structure": "aircraft_carrier",
+  "biomes": "#techguns:has_structure/ocean",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "armed=false,facing=down": { "model": "techguns:block/c4_charge", "x": 270 },
+    "armed=false,facing=up": { "model": "techguns:block/c4_charge", "x": 90 },
+    "armed=false,facing=north": { "model": "techguns:block/c4_charge", "y": 180 },
+    "armed=false,facing=south": { "model": "techguns:block/c4_charge", "y": 0 },
+    "armed=false,facing=east": { "model": "techguns:block/c4_charge", "y": 270 },
+    "armed=false,facing=west": { "model": "techguns:block/c4_charge", "y": 90 },
+    "armed=true,facing=down": { "model": "techguns:block/c4_charge_armed", "x": 270 },
+    "armed=true,facing=up": { "model": "techguns:block/c4_charge_armed", "x": 90 },
+    "armed=true,facing=north": { "model": "techguns:block/c4_charge_armed", "y": 180 },
+    "armed=true,facing=south": { "model": "techguns:block/c4_charge_armed", "y": 0 },
+    "armed=true,facing=east": { "model": "techguns:block/c4_charge_armed", "y": 270 },
+    "armed=true,facing=west": { "model": "techguns:block/c4_charge_armed", "y": 90 }
+  }
+}

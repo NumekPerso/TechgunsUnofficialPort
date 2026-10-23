@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "techguns:camonet_top",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:camonet_top",
+                  "properties": {
+                    "type": "wood"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:camonet_top",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:camonet_top",
+                  "properties": {
+                    "type": "desert"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{type:\"desert\"}}"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:camonet_top",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:camonet_top",
+                  "properties": {
+                    "type": "snow"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{type:\"snow\"}}"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

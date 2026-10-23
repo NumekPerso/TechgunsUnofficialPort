@@ -1,0 +1,8 @@
+{
+  "parent": "techguns:block/camonet_inventory",
+  "textures": {
+    "0": "minecraft:block/acacia_planks",
+    "1": "techguns:blocks/camonet_desert",
+    "particle": "techguns:blocks/camonet_desert"
+  }
+}

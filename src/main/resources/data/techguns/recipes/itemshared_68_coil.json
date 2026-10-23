@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " wi",
+    "wiw",
+    "iw "
+  ],
+  "key": {
+    "i": {
+      "tag": "forge:ingots/iron"
+    },
+    "w": {
+      "tag": "forge:wires/copper"
+    }
+  },
+  "result": {
+    "item": "techguns:coil"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "pcp",
+    "tut",
+    "pcp"
+  ],
+  "key": {
+    "c": {
+      "tag": "forge:circuits/basic"
+    },
+    "p": {
+      "tag": "forge:plates/lead"
+    },
+    "t": {
+      "item": "techguns:tgx"
+    },
+    "u": {
+      "tag": "forge:ingots/enriched_uranium"
+    }
+  },
+  "result": {
+    "item": "techguns:tacticalnukewarhead",
+    "count": 2
+  }
+}

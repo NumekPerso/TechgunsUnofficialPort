@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "techguns:item_door3x3_2"
+    }
+  ],
+  "result": {
+    "item": "techguns:item_door3x3_1"
+  }
+}

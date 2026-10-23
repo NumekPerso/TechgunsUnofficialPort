@@ -1,0 +1,9 @@
+{
+  "parent": "techguns:block/military_crate",
+  "textures": {
+    "top": "techguns:blocks/crate_top_red",
+    "side": "techguns:blocks/explosive_crate",
+    "bottom": "minecraft:block/spruce_planks",
+    "particle": "minecraft:block/spruce_planks"
+  }
+}

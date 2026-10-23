@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "type=container_red": {
+      "model": "techguns:block/container_red"
+    },
+    "type=container_green": {
+      "model": "techguns:block/container_green"
+    },
+    "type=container_blue": {
+      "model": "techguns:block/container_blue"
+    },
+    "type=container_orange": {
+      "model": "techguns:block/container_orange"
+    },
+    "type=panel_large_border": {
+      "model": "techguns:block/panel_large_border"
+    },
+    "type=steelframe_blue": {
+      "model": "techguns:block/steelframe_blue"
+    },
+    "type=steelframe_dark": {
+      "model": "techguns:block/steelframe_dark"
+    },
+    "type=steelframe_scaffold": {
+      "model": "techguns:block/steelframe_scaffold"
+    }
+  }
+}

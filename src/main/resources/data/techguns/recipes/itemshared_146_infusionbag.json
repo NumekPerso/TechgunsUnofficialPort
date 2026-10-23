@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "pp",
+    "pp"
+  ],
+  "key": {
+    "p": {
+      "tag": "forge:sheets/plastic"
+    }
+  },
+  "result": {
+    "item": "techguns:infusionbag",
+    "count": 4
+  }
+}

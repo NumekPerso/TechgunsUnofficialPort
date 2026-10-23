@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "sps",
+    "sps",
+    " s "
+  ],
+  "key": {
+    "p": {
+      "tag": "forge:plates/obsidian_steel"
+    },
+    "s": {
+      "tag": "forge:ingots/obsidian_steel"
+    }
+  },
+  "result": {
+    "item": "techguns:oredrillsmall_obsidiansteel"
+  }
+}

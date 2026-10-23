@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techguns:assaultriflemagazineempty"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    }
+  ],
+  "result": {
+    "item": "techguns:assaultriflemagazine_incendiary"
+  }
+}

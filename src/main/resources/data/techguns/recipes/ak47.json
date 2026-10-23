@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "bfs",
+    "wm "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "f": {
+      "item": "techguns:ironreceiver"
+    },
+    "m": {
+      "item": "techguns:assaultriflemagazine"
+    },
+    "s": {
+      "item": "techguns:woodstock"
+    },
+    "w": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "item": "techguns:ak47"
+  }
+}

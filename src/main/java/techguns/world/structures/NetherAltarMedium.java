@@ -1,0 +1,46 @@
+package techguns.world.structures;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import techguns.blocks.EnumMonsterSpawnerType;
+import techguns.util.MBlock;
+import techguns.world.StructureBlockUtils;
+import techguns.world.dungeon.presets.specialblocks.MBlockTGSpawner;
+
+public class NetherAltarMedium extends NetherTemplateStructure {
+	static ArrayList<MBlock> blockList = new ArrayList<MBlock>();
+	static short[][] blocks;
+	static {
+		blockList.add(new MBlock("techguns:nethermetal", 0));
+		blockList.add(new MBlock("techguns:nethermetal", 6));
+		blockList.add(new MBlock("minecraft:nether_brick_fence", 0));
+		blockList.add(MBlockRegister.AIR);
+		blockList.add(new MBlock("techguns:nethermetal", 2));
+		blockList.add(new MBlock("techguns:nethermetal", 8));
+		blockList.add(new MBlock("techguns:nethermetal", 1));
+		blockList.add(new MBlock("techguns:nethermetal", 7));
+		blockList.add(new MBlock("techguns:nethermetal", 9));
+		blockList.add(new MBlock("minecraft:nether_brick_stairs", 0));
+		blockList.add(new MBlockTGSpawner(EnumMonsterSpawnerType.HOLE, 3, 1, 200, 1).addMobType("cyberdemon", 1));
+		blockList.add(new MBlock("minecraft:nether_brick_stairs", 2));
+		blockList.add(new MBlock("minecraft:nether_brick_stairs", 3));
+		blockList.add(new MBlock("minecraft:nether_brick", 0));
+		blockList.add(new MBlock("minecraft:nether_brick_stairs", 1));
+		blocks = StructureBlockUtils.loadStructureFromFile("nether_altar_medium");
+	}
+
+	public NetherAltarMedium() {
+		super(16, 9, 16, 16, 9, 16, -1, 16);
+	}
+
+	@Override
+	protected List<MBlock> getBlockList() {
+		return blockList;
+	}
+
+	@Override
+	protected short[][] getBlocks() {
+		return blocks;
+	}
+}

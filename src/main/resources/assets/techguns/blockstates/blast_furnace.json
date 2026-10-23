@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "techguns:block/blast_furnace"
+    },
+    "facing=south": {
+      "model": "techguns:block/blast_furnace",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "techguns:block/blast_furnace",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "techguns:block/blast_furnace",
+      "y": 90
+    }
+  }
+}

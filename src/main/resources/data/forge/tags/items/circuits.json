@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:circuits/basic",
+    "#forge:circuits/elite"
+  ]
+}

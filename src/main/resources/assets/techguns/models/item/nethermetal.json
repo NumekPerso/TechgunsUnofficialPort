@@ -1,0 +1,59 @@
+{
+  "parent": "techguns:block/nethermetal_panel",
+  "overrides": [
+    {
+      "predicate": {
+        "techguns:variant": 1
+      },
+      "model": "techguns:block/nethermetal_grate1"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 2
+      },
+      "model": "techguns:block/nethermetal_grate2"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 3
+      },
+      "model": "techguns:block/nethermetal_grey_dark"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 4
+      },
+      "model": "techguns:block/nethermetal_grey"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 5
+      },
+      "model": "techguns:block/nethermetal_grey_tiles"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 6
+      },
+      "model": "techguns:block/nethermetal_border_red"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 7
+      },
+      "model": "techguns:block/nethermetal_plate_black"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 8
+      },
+      "model": "techguns:block/nethermetal_plate_red"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 9
+      },
+      "model": "techguns:block/nethermetal_border_lava"
+    }
+  ]
+}

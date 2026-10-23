@@ -1,0 +1,23 @@
+{
+  "parent": "techguns:block/ladder_metal",
+  "overrides": [
+    {
+      "predicate": {
+        "techguns:variant": 1
+      },
+      "model": "techguns:block/ladder_shiny"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 2
+      },
+      "model": "techguns:block/ladder_rusty"
+    },
+    {
+      "predicate": {
+        "techguns:variant": 3
+      },
+      "model": "techguns:block/ladder_carbon"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "igi",
+    "isi",
+    "igi"
+  ],
+  "key": {
+    "g": {
+      "tag": "forge:glass_panes"
+    },
+    "i": {
+      "tag": "forge:ingots/steel"
+    },
+    "s": {
+      "item": "minecraft:shield"
+    }
+  },
+  "result": {
+    "item": "techguns:riot_shield"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "frs",
+    " m "
+  ],
+  "key": {
+    "f": {
+      "item": "techguns:pumpmechanism"
+    },
+    "m": {
+      "item": "techguns:biotank"
+    },
+    "r": {
+      "item": "techguns:steelreceiver"
+    },
+    "s": {
+      "item": "techguns:plasticstock"
+    }
+  },
+  "result": {
+    "item": "techguns:biogun"
+  }
+}

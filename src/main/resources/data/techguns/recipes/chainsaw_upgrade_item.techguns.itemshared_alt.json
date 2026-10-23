@@ -1,0 +1,18 @@
+{
+  "type": "techguns:miningtool_upgrade",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "type": "techguns:itemstack_has_nbt_int",
+      "item": "techguns:chainsaw",
+      "key": "miningHead",
+      "value": 1
+    },
+    {
+      "item": "techguns:chainsawblades_carbon"
+    }
+  ],
+  "result": {
+    "item": "techguns:chainsaw"
+  }
+}

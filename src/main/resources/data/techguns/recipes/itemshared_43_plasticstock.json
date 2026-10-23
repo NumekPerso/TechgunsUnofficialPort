@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ppp",
+    "  p"
+  ],
+  "key": {
+    "p": {
+      "tag": "forge:sheets/plastic"
+    }
+  },
+  "result": {
+    "item": "techguns:plasticstock"
+  }
+}

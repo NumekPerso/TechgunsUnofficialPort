@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "ingredient": {
+    "item": "techguns:platetin"
+  },
+  "result": "techguns:ingottin",
+  "experience": 0,
+  "cookingtime": 100
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "imi",
+    "mem",
+    "iri"
+  ],
+  "key": {
+    "e": {
+      "item": "techguns:electricengine"
+    },
+    "i": {
+      "tag": "forge:plates/iron"
+    },
+    "m": {
+      "item": "techguns:mechanicalpartsiron"
+    },
+    "r": {
+      "tag": "forge:dusts/redstone"
+    }
+  },
+  "result": {
+    "item": "techguns:grinder"
+  }
+}

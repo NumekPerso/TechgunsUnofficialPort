@@ -1,0 +1,321 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 12
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gunpowder",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:heavycloth",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:plasticsheet",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:rubberbar",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:ingotobsidiansteel",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 0,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "techguns:revolver",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:thompson",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:boltaction",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:m4",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:pistol",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:combatshotgun",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:mac10",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:aug",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 4
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "techguns:pistolrounds",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:shotgunrounds",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 4,
+                "max": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:riflerounds",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:smgmagazine",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:pistolmagazine",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:assaultriflemagazine",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

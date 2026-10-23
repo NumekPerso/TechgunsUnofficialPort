@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " g ",
+    "gbg",
+    " g "
+  ],
+  "key": {
+    "b": {
+      "tag": "forge:slimeballs"
+    },
+    "g": {
+      "tag": "forge:dyes/green"
+    }
+  },
+  "result": {
+    "item": "techguns:biomass",
+    "count": 4
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "formed=false": { "model": "techguns:block/fabricator_glass" },
+    "formed=true": { "model": "techguns:block/fabricator_glass_formed" }
+  }
+}

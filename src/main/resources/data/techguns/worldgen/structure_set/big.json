@@ -1,0 +1,21 @@
+{
+  "structures": [
+    {
+      "structure": "techguns:military_base",
+      "weight": 1
+    },
+    {
+      "structure": "techguns:castle",
+      "weight": 1
+    },
+    {
+      "structure": "techguns:aircraft_carrier",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "techguns:tg_spread",
+    "size": "big",
+    "salt": 1612345703
+  }
+}

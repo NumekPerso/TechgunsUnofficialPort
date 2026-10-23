@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "pcp",
+    "cec",
+    "pcp"
+  ],
+  "key": {
+    "c": {
+      "tag": "forge:circuits/basic"
+    },
+    "e": {
+      "item": "techguns:electricengine"
+    },
+    "p": {
+      "tag": "forge:plates/iron"
+    }
+  },
+  "result": {
+    "item": "techguns:oredrill_controller"
+  }
+}

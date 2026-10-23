@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:plates/iron",
+    "#forge:plates/copper",
+    "#forge:plates/tin",
+    "#forge:plates/bronze",
+    "#forge:plates/steel",
+    "#forge:plates/obsidian_steel",
+    "#forge:plates/lead",
+    "#forge:plates/titanium",
+    "#forge:plates/carbon"
+  ]
+}

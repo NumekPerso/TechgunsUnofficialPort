@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "sgs",
+    "cbc",
+    "sgs"
+  ],
+  "key": {
+    "b": {
+      "tag": "forge:circuits/basic"
+    },
+    "c": {
+      "item": "techguns:coil"
+    },
+    "g": {
+      "tag": "forge:wires/gold"
+    },
+    "s": {
+      "tag": "forge:plates/steel"
+    }
+  },
+  "result": {
+    "item": "techguns:charging_station"
+  }
+}

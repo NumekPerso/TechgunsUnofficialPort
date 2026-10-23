@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " gc",
+    "rbb",
+    " f "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:obsidiansteelbarrel"
+    },
+    "c": {
+      "tag": "forge:circuits/elite"
+    },
+    "f": {
+      "item": "techguns:obsidiansteelreceiver"
+    },
+    "g": {
+      "type": "techguns:hardened_glass_or_glass"
+    },
+    "r": {
+      "item": "techguns:rocket"
+    }
+  },
+  "result": {
+    "item": "techguns:guidedmissilelauncher"
+  }
+}

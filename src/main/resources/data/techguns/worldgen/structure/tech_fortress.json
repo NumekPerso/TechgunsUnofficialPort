@@ -1,0 +1,8 @@
+{
+  "type": "techguns:tg_structure",
+  "structure": "tech_fortress",
+  "biomes": "#techguns:has_structure/overworld_land",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "none"
+}

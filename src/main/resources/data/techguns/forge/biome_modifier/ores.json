@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "techguns:ore_copper",
+    "techguns:ore_tin",
+    "techguns:ore_lead",
+    "techguns:ore_uranium",
+    "techguns:ore_titanium"
+  ],
+  "step": "underground_ores"
+}

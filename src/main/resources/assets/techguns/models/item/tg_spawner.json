@@ -1,0 +1,11 @@
+{
+  "parent": "techguns:block/hole",
+  "overrides": [
+    {
+      "predicate": {
+        "techguns:variant": 1
+      },
+      "model": "techguns:block/soldier_spawn"
+    }
+  ]
+}

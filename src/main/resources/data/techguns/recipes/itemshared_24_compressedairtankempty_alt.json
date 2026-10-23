@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "plp",
+    "p p",
+    "ppp"
+  ],
+  "key": {
+    "l": {
+      "item": "minecraft:lever"
+    },
+    "p": {
+      "tag": "forge:plates/tin"
+    }
+  },
+  "result": {
+    "item": "techguns:compressedairtankempty",
+    "count": 7
+  }
+}

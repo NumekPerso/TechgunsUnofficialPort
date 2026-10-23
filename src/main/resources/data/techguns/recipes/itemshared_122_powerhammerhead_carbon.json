@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "p  ",
+    "pii",
+    "p  "
+  ],
+  "key": {
+    "i": {
+      "tag": "forge:ingots/obsidian_steel"
+    },
+    "p": {
+      "tag": "forge:plates/carbon"
+    }
+  },
+  "result": {
+    "item": "techguns:powerhammerhead_carbon"
+  }
+}

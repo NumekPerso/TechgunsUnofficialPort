@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "pcg",
+    "bms",
+    " e "
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:laserbarrel"
+    },
+    "c": {
+      "tag": "forge:circuits/elite"
+    },
+    "e": {
+      "item": "techguns:energycellempty"
+    },
+    "g": {
+      "type": "techguns:hardened_glass_or_glass"
+    },
+    "m": {
+      "item": "techguns:carbonreceiver"
+    },
+    "p": {
+      "tag": "forge:plates/carbon"
+    },
+    "s": {
+      "item": "techguns:carbonstock"
+    }
+  },
+  "result": {
+    "item": "techguns:blasterrifle",
+    "nbt": "{ammo:0s,ammovariant:\"default\",camo:0b}"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:as50"
+    },
+    {
+      "item": "techguns:as50magazine_incendiary"
+    }
+  ],
+  "result": {
+    "item": "techguns:as50"
+  }
+}

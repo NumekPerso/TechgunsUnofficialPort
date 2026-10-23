@@ -1,0 +1,7 @@
+{
+  "parent": "techguns:block/camonet_top_inventory",
+  "textures": {
+    "0": "techguns:blocks/camonet_snow",
+    "particle": "techguns:blocks/camonet_snow"
+  }
+}

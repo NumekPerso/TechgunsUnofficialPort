@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "values": [
+    "techguns:ammo_press",
+    "techguns:charging_station",
+    "techguns:chem_lab",
+    "techguns:reactionchamber_housing",
+    "techguns:reactionchamber_glass",
+    "techguns:reactionchamber_controller",
+    "techguns:metal_press",
+    "techguns:blast_furnace",
+    "techguns:grinder",
+    "techguns:camo_bench",
+    "techguns:repair_bench",
+    "techguns:armor_bench",
+    "techguns:fabricator_housing",
+    "techguns:fabricator_glass",
+    "techguns:fabricator_controller",
+    "techguns:oredrill_frame",
+    "techguns:oredrill_scaffold",
+    "techguns:oredrill_rod",
+    "techguns:oredrill_engine",
+    "techguns:oredrill_controller",
+    "techguns:oredrill_scaffold_hidden",
+    "techguns:explosive_charge",
+    "techguns:explosive_charge_advanced",
+    "techguns:turret",
+    "techguns:dungeon_scanner",
+    "techguns:dungeon_generator"
+  ]
+}

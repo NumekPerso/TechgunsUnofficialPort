@@ -1,0 +1,15 @@
+{
+  "type": "techguns:ammo_change_crafting",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "techguns:mac10"
+    },
+    {
+      "item": "techguns:smgmagazine"
+    }
+  ],
+  "result": {
+    "item": "techguns:mac10"
+  }
+}

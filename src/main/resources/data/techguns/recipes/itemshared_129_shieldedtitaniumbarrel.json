@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "tct",
+    "lbl",
+    "tct"
+  ],
+  "key": {
+    "b": {
+      "item": "techguns:carbonbarrel"
+    },
+    "c": {
+      "tag": "forge:circuits/elite"
+    },
+    "l": {
+      "tag": "forge:plates/lead"
+    },
+    "t": {
+      "tag": "forge:plates/titanium"
+    }
+  },
+  "result": {
+    "item": "techguns:shieldedtitaniumbarrel"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t1_combat_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_combat_boots",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_helmet",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_chestplate",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_leggings",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "techguns:t2_commando_boots",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

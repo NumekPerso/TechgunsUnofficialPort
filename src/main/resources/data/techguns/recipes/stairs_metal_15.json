@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "b  ",
+    "bb ",
+    "bbb"
+  ],
+  "key": {
+    "b": {
+      "type": "forge:partial_nbt",
+      "item": "techguns:metalpanel",
+      "nbt": {
+        "BlockStateTag": {
+          "type": "steelframe_dark"
+        }
+      }
+    }
+  },
+  "result": {
+    "item": "techguns:stairs_metal_2",
+    "count": 6
+  }
+}

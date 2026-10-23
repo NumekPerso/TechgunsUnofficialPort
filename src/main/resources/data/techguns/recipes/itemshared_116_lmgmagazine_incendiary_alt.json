@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "techguns:lmgmagazineempty"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    },
+    {
+      "item": "techguns:riflerounds_incendiary"
+    }
+  ],
+  "result": {
+    "item": "techguns:lmgmagazine_incendiary"
+  }
+}

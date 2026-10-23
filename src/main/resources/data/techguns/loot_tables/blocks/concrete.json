@@ -1,0 +1,129 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "techguns:concrete",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:concrete",
+                  "properties": {
+                    "type": "concrete_brown"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:concrete",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:concrete",
+                  "properties": {
+                    "type": "concrete_brown_light"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{type:\"concrete_brown_light\"}}"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:concrete",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:concrete",
+                  "properties": {
+                    "type": "concrete_grey"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{type:\"concrete_grey\"}}"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:concrete",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:concrete",
+                  "properties": {
+                    "type": "concrete_grey_dark"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{type:\"concrete_grey_dark\"}}"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:concrete",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:concrete",
+                  "properties": {
+                    "type": "concrete_brown_pipes"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{type:\"concrete_brown_pipes\"}}"
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "techguns:concrete",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "techguns:concrete",
+                  "properties": {
+                    "type": "concrete_brown_light_scaff"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_nbt",
+                  "tag": "{BlockStateTag:{type:\"concrete_brown_light_scaff\"}}"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}
