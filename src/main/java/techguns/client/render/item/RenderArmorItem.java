@@ -30,35 +30,9 @@ public class RenderArmorItem extends RenderItemBase {
 		this.modelBiped = model;
 		this.armorSlot = armorSlot;
 
+		//gui, item frame and ground: fitted to the model size (renderItem)
 		this.scale_thirdp = 1.0f;
 		this.scale_ego = 1.0f;
-		this.scale_gui = 1.5f;
-		this.scale_itemframe = 1.5f;
-
-		if (armorSlot == EquipmentSlot.HEAD) {
-			this.scale_ground = 1.25f;
-		} else {
-			this.scale_ground = 1.5f;
-		}
-
-		switch (armorSlot) {
-		case HEAD:
-			this.translateBase[1] = -0.54f;
-			break;
-		case CHEST:
-			this.translateBase[1] = -0.9f;
-			break;
-		case LEGS:
-			this.translateBase[1] = -1.29f;
-			break;
-		case FEET:
-			this.translateBase[1] = -1.42f;
-			break;
-		default:
-			break;
-		}
-
-		this.translateType[4][2] = 0.07f; //Item Frame, Z
 
 		this.translateType[0][1] = 0.1f;
 		this.translateType[1][1] = 0.04f;
@@ -76,24 +50,30 @@ public class RenderArmorItem extends RenderItemBase {
 		this.modelBiped.setDefaultPose();
 		this.modelBiped.setVisibleForSlot(this.armorSlot, true);
 
-		if (ItemDisplayContext.GUI == transform) {
-			//The 1.12 fixed GUI scale/translation made the bulky power armors overflow the slot: fit the model in the slot instead
-			poseStack.mulPose(Axis.YP.rotationDegrees(180.0f));
-			if (this.guiBounds == null) {
-				this.guiBounds = computeBounds();
+		if (this.guiBounds == null) {
+			this.guiBounds = computeBounds();
+		}
+		float[] b = this.guiBounds;
+		float maxDim = Math.max(b[3] - b[0], Math.max(b[4] - b[1], b[5] - b[2]));
+
+		if (ItemDisplayContext.GUI == transform || ItemDisplayContext.FIXED == transform || ItemDisplayContext.GROUND == transform) {
+			//The 1.12 fixed scale/translation made the bulky power armors overflow the slot / item frame and float above
+			//the ground: fit the model (gui 0.95 block, item frame 0.75, ground 1 block before the 0.5 ground scale of the item model)
+			float size = transform == ItemDisplayContext.GUI ? 0.95f : (transform == ItemDisplayContext.FIXED ? 0.75f : 1.0f);
+			if (transform != ItemDisplayContext.GROUND) {
+				poseStack.mulPose(Axis.YP.rotationDegrees(180.0f));
 			}
-			float[] b = this.guiBounds;
-			float maxDim = Math.max(b[3] - b[0], Math.max(b[4] - b[1], b[5] - b[2]));
-			float s = maxDim > 0f ? 0.95f / (maxDim / 16.0f) : 1.0f;
+			float s = maxDim > 0f ? size / (maxDim / 16.0f) : 1.0f;
 			poseStack.scale(s, s, s);
 			this.setBaseRotation(poseStack, transform);
-			poseStack.translate(-(b[0] + b[3]) * 0.5f / 16.0f, -(b[1] + b[4]) * 0.5f / 16.0f, -(b[2] + b[5]) * 0.5f / 16.0f);
 		} else {
 			this.applyTranslation(poseStack, transform);
 			this.setBaseScale(poseStack, elb, transform);
 			this.setBaseRotation(poseStack, transform);
-			this.applyBaseTranslation(poseStack);
 		}
+		//center of the model in the hand / slot: the 1.12 base translation was a fixed height per slot, the models were
+		//far from the hand (helmet 0.8 block above it)
+		poseStack.translate(-(b[0] + b[3]) * 0.5f / 16.0f, -(b[1] + b[4]) * 0.5f / 16.0f, -(b[2] + b[5]) * 0.5f / 16.0f);
 
 		VertexConsumer vc = buffers.getBuffer(RenderType.entityCutoutNoCull(this.texture));
 		this.modelBiped.render(poseStack, vc, packedLight, packedOverlay, 1f, 1f, 1f, 1f, false, SCALE);

@@ -1006,6 +1006,9 @@ public class GenericGun extends GenericItem implements IGenericGun, IItemTGRende
 			list.add(Component.literal(TextUtil.trans("techguns.gun.tooltip.damageType") + ": ").withStyle(ChatFormatting.GRAY).append(this.getDamageType(stack).getDisplayComponent()));
 			addLine(list, TextUtil.trans("techguns.gun.tooltip.damage") + (this.shotgun ? ("(x" + (this.bulletcount + 1) + ")") : "") + ": " + getTooltipTextDmg(stack, true));
 			addLine(list, getTooltipTextRange(stack));
+			if (this.projectile_selector.getFactoryForType(this.getCurrentAmmoVariantKey(stack)) instanceof IProjectileBounceFactory<?> bounceFactory) {
+				addLine(list, TextUtil.trans("techguns.gun.tooltip.bounces") + ": " + bounceFactory.getMaxBounces());
+			}
 			addLine(list, getTooltipTextVelocity(stack));
 			addLine(list, TextUtil.trans("techguns.gun.tooltip.spread") + ": " + this.accuracy + (this.zoombonus != 1.0 ? (" Z:" + this.zoombonus * this.accuracy) : ""));
 			addLine(list, TextUtil.trans("techguns.gun.tooltip.clipsize") + ": " + this.clipsize);

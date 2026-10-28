@@ -2,12 +2,19 @@ package techguns.items.guns.ammo;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import techguns.util.ItemUtil;
 
 public class AmmoType {
+
+	/**
+	 * Every item used as ammo by a gun (all ammo types and variants), for the turret ammo slots
+	 */
+	protected static final Set<Item> ALL_AMMO_ITEMS = new HashSet<>();
 
 	protected Item[] emptyMagItems = { null };
 	protected ItemStack[] emptyMag = null;
@@ -20,6 +27,19 @@ public class AmmoType {
 	public AmmoType(Item... ammo) {
 		this.variants.add(new AmmoVariant(ammo, ammo));
 		ammoVariantIDs.put(AmmoTypes.TYPE_DEFAULT, 0);
+		registerAmmoItems(ammo);
+	}
+
+	protected static void registerAmmoItems(Item[] ammo) {
+		for (Item i : ammo) {
+			if (i != null) {
+				ALL_AMMO_ITEMS.add(i);
+			}
+		}
+	}
+
+	public static boolean isAmmo(ItemStack stack) {
+		return !stack.isEmpty() && ALL_AMMO_ITEMS.contains(stack.getItem());
 	}
 
 	public AmmoType addVariant(String key, Item ammo, Item bullet) {
@@ -41,6 +61,7 @@ public class AmmoType {
 	public AmmoType addVariant(String key, Item[] ammo, Item[] bullet) {
 		this.variants.add(new AmmoVariant(key, ammo, bullet));
 		ammoVariantIDs.put(key, this.variants.size() - 1);
+		registerAmmoItems(ammo);
 		return this;
 	}
 
@@ -71,6 +92,7 @@ public class AmmoType {
 		ammoVariantIDs.put(AmmoTypes.TYPE_DEFAULT, 0);
 		this.emptyMagItems = emptyMag;
 		this.bulletsPerMag = bulletsPerMag;
+		registerAmmoItems(ammo);
 	}
 
 	public String getAmmoVariantKeyfor(ItemStack stack, int index) {

@@ -58,6 +58,11 @@ public class RocketProjectile extends GenericProjectile {
 		this.explodeRocket();
 	}
 
+	@Override
+	protected void onStoppedInWater() {
+		this.explodeRocket();
+	}
+
 	protected void explodeRocket() {
 		if (!this.level().isClientSide) {
 			TGPackets.network.sendToAllAround(new PacketSpawnParticle("RocketExplosion", this.getX(), this.getY(), this.getZ()), TGPackets.targetPointAroundEnt(this, 50.0f));

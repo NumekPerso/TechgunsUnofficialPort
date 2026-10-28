@@ -7,6 +7,7 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.network.chat.Component;
 import techguns.TGPackets;
 import techguns.capabilities.TGExtendedPlayer;
+import techguns.gui.widgets.TGButtonStyle;
 import techguns.keybind.TGKeybindsID;
 import techguns.packets.PacketTGKeybindPress;
 
@@ -45,9 +46,8 @@ public class TGGuiToggleButton extends AbstractButton {
 
 	@Override
 	protected void renderWidget(GuiGraphics g, int mouseX, int mouseY, float partialTicks) {
-		//vanilla button background (1.12 GuiUtils.drawContinuousTexturedBox with the button texture)
-		int k = !this.active ? 0 : (this.isHoveredOrFocused() ? 2 : 1);
-		g.blitNineSliced(WIDGETS_LOCATION, this.getX(), this.getY(), this.width, this.height, 2, 2, 2, 3, 200, 20, 0, 46 + k * 20);
+		//1.12 button background (1.12 GuiUtils.drawContinuousTexturedBox with the 1.12 button texture)
+		TGButtonStyle.drawBackground(g, this.getX(), this.getY(), this.width, this.height, TGButtonStyle.getState(this));
 
 		TGExtendedPlayer props = TGExtendedPlayer.get(Minecraft.getInstance().player);
 		if (props == null) {

@@ -13,9 +13,13 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.IRecipeTransferRegistration;
+import mezz.jei.api.registration.ISubtypeRegistration;
 import mezz.jei.api.registration.IVanillaCategoryExtensionRegistration;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import techguns.TGItems;
+import techguns.blocks.GenericItemBlockMeta;
 import net.minecraftforge.common.ForgeHooks;
 import techguns.TGMachines;
 import techguns.Techguns;
@@ -61,6 +65,19 @@ public class TGJeiPlugin implements IModPlugin {
 	@Override
 	public ResourceLocation getPluginUid() {
 		return UID;
+	}
+
+	/**
+	 * The variants of the meta blocks (camo nets, concrete, lamps...) are the same item with the block state type in the
+	 * NBT: without a subtype interpreter JEI merged them into one entry
+	 */
+	@Override
+	public void registerItemSubtypes(ISubtypeRegistration registration) {
+		for (Item item : TGItems.ITEMLIST) {
+			if (item instanceof GenericItemBlockMeta<?> meta) {
+				registration.registerSubtypeInterpreter(VanillaTypes.ITEM_STACK, item, (stack, context) -> meta.getMetaBlock().getTypeFromStack(stack).getSerializedName());
+			}
+		}
 	}
 
 	@Override

@@ -41,6 +41,11 @@ public class PoweredArmor extends GenericArmorMultiCamo {
 	 * position (x,z) of the players in the last consumption tick, used to detect movement
 	 */
 	protected static final Map<Player, double[]> LAST_POSITIONS = Collections.synchronizedMap(new WeakHashMap<>());
+	/**
+	 * Separate map for the client: the keys compare entity ids (Entity.equals), in singleplayer the client and server
+	 * player have the same id and overwrote each other's position, the server saw no movement and consumed no power
+	 */
+	protected static final Map<Player, double[]> LAST_POSITIONS_CLIENT = Collections.synchronizedMap(new WeakHashMap<>());
 
 	//
 	protected float SpeedBonusUnpowered = 0.0f;
@@ -302,7 +307,8 @@ public class PoweredArmor extends GenericArmorMultiCamo {
 		boolean moving = false;
 		float f = 0.001f;
 		//1.12 used motionX/Z, the movement of a player is not in its delta movement on the server in 1.20: compare with the position of the last tick
-		double[] last = LAST_POSITIONS.get(player);
+		Map<Player, double[]> positions = player.level().isClientSide ? LAST_POSITIONS_CLIENT : LAST_POSITIONS;
+		double[] last = positions.get(player);
 		if (last != null) {
 			double mx = player.getX() - last[0];
 			double mz = player.getZ() - last[1];
@@ -310,7 +316,7 @@ public class PoweredArmor extends GenericArmorMultiCamo {
 				moving = true;
 			}
 		}
-		LAST_POSITIONS.put(player, new double[] { player.getX(), player.getZ() });
+		positions.put(player, new double[] { player.getX(), player.getZ() });
 
 		ArmorPowerType power = null;
 

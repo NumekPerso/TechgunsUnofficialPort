@@ -176,7 +176,8 @@ public class WorldGenTGStructureSpawn extends Structure {
 	}
 
 	public static BiomeColorType getBiomeColorTypeFromBiome(Holder<Biome> biome) {
-		if (biome.is(Tags.Biomes.IS_COLD) || biome.is(Tags.Biomes.IS_SNOWY)) {
+		//1.12 also used the cold biomes (taiga, windswept hills...): structures built of snow blocks without snow around
+		if (biome.is(Tags.Biomes.IS_SNOWY)) {
 			return BiomeColorType.SNOW;
 		} else if (biome.is(Tags.Biomes.IS_SANDY) || biome.is(BiomeTags.IS_BEACH) || biome.is(BiomeTags.IS_BADLANDS)) {
 			return BiomeColorType.DESERT;

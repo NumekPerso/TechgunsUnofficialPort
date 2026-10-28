@@ -10,7 +10,9 @@ import techguns.capabilities.TGExtendedPlayer;
 public enum EntityCondition {
 	NONE(0),
 	CHARGING_WEAPON(1),
-	ENTITY_ALIVE(2);
+	ENTITY_ALIVE(2),
+	/** alive and not on the ground (trails of flying debris) */
+	AIRBORNE(3);
 
 	public byte id = 0;
 
@@ -35,6 +37,8 @@ public enum EntityCondition {
 			return false;
 		case ENTITY_ALIVE:
 			return entity.isAlive();
+		case AIRBORNE:
+			return entity.isAlive() && !entity.onGround();
 		case NONE:
 		default: //If no condition is set, never stop a sound/particle.
 			return true;

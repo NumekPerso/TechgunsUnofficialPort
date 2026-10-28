@@ -72,9 +72,11 @@ public class SonicShotgun extends GenericGun {
 
 				dir = dir.yRot((float) ((-player.getYHeadRot() - 90.0) * MathUtil.D2R));
 
-				proj.motionX = dir.x * speed;
-				proj.motionY = dir.y * speed;
-				proj.motionZ = dir.z * speed;
+				//1.12 used dir*speed: the rings were slower than the main projectile (dir*1.5*speed, see GenericProjectile.shoot)
+				//and lagged behind the visible wave
+				proj.motionX = dir.x * speed * 1.5;
+				proj.motionY = dir.y * speed * 1.5;
+				proj.motionZ = dir.z * speed * 1.5;
 				proj.setDeltaMovement(proj.motionX, proj.motionY, proj.motionZ);
 
 				if (offset > 0.0f) {

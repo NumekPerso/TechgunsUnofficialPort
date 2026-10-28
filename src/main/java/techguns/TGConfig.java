@@ -27,8 +27,8 @@ public class TGConfig {
 	public static float cl_fixedSprintFov = 1.15f;
 	public static float cl_effectsQuality = 1.0f;
 
-	// lot I: radiation (1.12 default was true: the radiation system was WIP in 1.12)
-	public static boolean WIP_disableRadiationSystem = false;
+	// lot I: radiation, disabled by default like in 1.12
+	public static boolean WIP_disableRadiationSystem = true;
 
 	// worldgen (lot B: ores)
 	public static boolean doOreGenCopper = true;
@@ -257,7 +257,8 @@ public class TGConfig {
 		DISABLE_AUTOFEEDER = b.comment("Disable automatic feeding of Food in the Techguns tab. Disable autofeeding if you think it breaks the balance").define("disableAutofeeder", false);
 		MACHINES_NEED_NO_POWER = b.comment("Machines don't need power, activate this if you don't want to install a mod with generators and still be able to use the machines").define("machinesNeedNoPower", false);
 		UPGRADE_XP_COST = b.comment("Base XP value for Upgrade Bench recipes (enchants)").defineInRange("UpgradeXPCost", 20, 0, 10000);
-		DISABLE_RADIATION = b.comment("Disable the radiation system (radiation sickness, radioactive items, RadAway/Rad pills still usable)").define("disableRadiationSystem", false);
+		//1.12 key and default: configs of 1.0.0 had "disableRadiationSystem" = false, the new key gives them the new default
+		DISABLE_RADIATION = b.comment("Disable the radiation system (radiation sickness, radioactive items, RadAway/Rad pills still usable). Set to false to enable radiation.").define("WIP_disableRadiationSystem", true);
 		b.pop();
 		b.push("damage_factors");
 		DAMAGE_PVP = b.comment("Damage factor Techguns weapons deal when fired from players against other players, is zero when PvP is disabled").defineInRange("DamagePvP", 0.5, 0.0, 100.0);

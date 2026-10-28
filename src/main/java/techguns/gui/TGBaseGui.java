@@ -119,7 +119,7 @@ public abstract class TGBaseGui<T extends TGBaseContainer> extends AbstractConta
 			if (slot instanceof ITGSlotBackground bg && !slot.hasItem() && slot.isActive()) {
 				ResourceLocation bgtex = bg.getBackgroundTexture();
 				if (bgtex != null) {
-					g.blit(bgtex, this.leftPos + slot.x, this.topPos + slot.y, 0, 0, 16, 16, 16, 16);
+					ITGSlotBackground.drawIcon(g, bgtex, this.leftPos + slot.x, this.topPos + slot.y);
 				}
 			}
 		}

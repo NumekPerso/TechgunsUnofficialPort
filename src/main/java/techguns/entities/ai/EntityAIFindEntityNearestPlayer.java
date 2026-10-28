@@ -20,9 +20,16 @@ public class EntityAIFindEntityNearestPlayer extends Goal {
 	private final Mob entityLiving;
 	private final Predicate<Player> predicate;
 	private LivingEntity entityTarget;
+	/** vertical search range (1.12: 4 blocks) */
+	private final double verticalRange;
 
 	public EntityAIFindEntityNearestPlayer(Mob entityLivingIn) {
+		this(entityLivingIn, 4.0D);
+	}
+
+	public EntityAIFindEntityNearestPlayer(Mob entityLivingIn, double verticalRange) {
 		this.entityLiving = entityLivingIn;
+		this.verticalRange = verticalRange;
 		this.setFlags(java.util.EnumSet.of(Goal.Flag.TARGET));
 		this.predicate = (Player p) -> {
 			if (p.getAbilities().invulnerable) {
@@ -67,7 +74,7 @@ public class EntityAIFindEntityNearestPlayer extends Goal {
 	@Override
 	public boolean canUse() {
 		double d0 = this.maxTargetRange();
-		List<Player> list = this.entityLiving.level().getEntitiesOfClass(Player.class, this.entityLiving.getBoundingBox().inflate(d0, 4.0D, d0), this.predicate);
+		List<Player> list = this.entityLiving.level().getEntitiesOfClass(Player.class, this.entityLiving.getBoundingBox().inflate(d0, this.verticalRange, d0), this.predicate);
 		list.sort(Comparator.comparingDouble(p -> p.distanceToSqr(this.entityLiving)));
 
 		if (list.isEmpty()) {

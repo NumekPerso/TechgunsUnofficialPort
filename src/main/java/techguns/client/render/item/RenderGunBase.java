@@ -464,9 +464,20 @@ public class RenderGunBase extends RenderItemBase {
 		return this;
 	}
 
+	/**
+	 * Models with zero thickness planes (both faces in the same plane) need back face culling, without it the two faces
+	 * flicker (z-fighting)
+	 */
+	protected boolean cullFaces = false;
+
+	public RenderGunBase setCullFaces() {
+		this.cullFaces = true;
+		return this;
+	}
+
 	@Override
 	protected RenderType getRenderType(ResourceLocation tex) {
-		return RenderType.entityCutoutNoCull(tex);
+		return this.cullFaces ? RenderType.entityCutout(tex) : RenderType.entityCutoutNoCull(tex);
 	}
 
 	/**

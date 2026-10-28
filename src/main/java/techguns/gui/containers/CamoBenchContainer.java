@@ -100,10 +100,24 @@ public class CamoBenchContainer extends OwnedTileContainer {
 						}
 						slot.onQuickCraft(stack1, stack);
 					}
-				} else if (slotid >= 1) {
-					//pressed in player gui
+				} else if (slotid < 37) {
+					//pressed in player inventory: camo slot, armor slot (quick equip) if the camo slot is used
 					if (!this.moveItemStackTo(stack1, 0, 0 + 1, false)) {
-						return ItemStack.EMPTY;
+						if (!(stack1.getItem() instanceof ArmorItem armor)) {
+							return ItemStack.EMPTY;
+						}
+						int type = getArmorIntFromEntityEquipmentSlot(armor.getEquipmentSlot());
+						if (!this.moveItemStackTo(stack1, 37 + type, 37 + type + 1, false)) {
+							return ItemStack.EMPTY;
+						}
+					}
+					slot.onQuickCraft(stack1, stack);
+				} else {
+					//pressed in an armor / Techguns / offhand slot: camo slot, player inventory if the camo slot is used
+					if (!this.moveItemStackTo(stack1, 0, 0 + 1, false)) {
+						if (!this.moveItemStackTo(stack1, 1, 37, false)) {
+							return ItemStack.EMPTY;
+						}
 					}
 					slot.onQuickCraft(stack1, stack);
 				}

@@ -9,6 +9,7 @@ import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.client.sounds.SoundManager;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ServerboundContainerClosePacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import techguns.TGPackets;
@@ -50,8 +51,10 @@ public class TGGuiTabButton extends AbstractButton {
 		}
 		Minecraft mc = Minecraft.getInstance();
 		if (GUI_ID < 0) {
-			//1.12: CPacketCloseWindow + display GuiInventory
-			mc.player.closeContainer();
+			//1.12: CPacketCloseWindow + display GuiInventory. LocalPlayer.closeContainer() would also set the screen to null:
+			//the mouse gets grabbed (cursor centered) before the inventory screen releases it again
+			mc.player.connection.send(new ServerboundContainerClosePacket(mc.player.containerMenu.containerId));
+			mc.player.containerMenu = mc.player.inventoryMenu;
 			mc.setScreen(new InventoryScreen(mc.player));
 		} else {
 			TGPackets.network.sendToServer(new PacketOpenPlayerGUI(GUI_ID));

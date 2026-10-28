@@ -2,6 +2,9 @@ package techguns.gui.widgets;
 
 import javax.annotation.Nullable;
 
+import com.mojang.blaze3d.systems.RenderSystem;
+
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
 import techguns.Techguns;
 
@@ -22,8 +25,22 @@ public interface ITGSlotBackground {
 	public static final ResourceLocation TURRETARMORSLOT_TEX = emptySlot("emptyslot_turretarmor");
 	public static final ResourceLocation TURRETGUNSLOT_TEX = emptySlot("emptyslot_turretgun");
 
+	/**
+	 * The icons are almost black (25,32,34), half transparent they look gray like the vanilla empty slot icons
+	 */
+	public static final float ICON_ALPHA = 0.5f;
+
 	public static ResourceLocation emptySlot(String name) {
 		return new ResourceLocation(Techguns.MODID, "textures/gui/emptyslots/" + name + ".png");
+	}
+
+	public static void drawIcon(GuiGraphics g, ResourceLocation tex, int x, int y) {
+		RenderSystem.enableBlend();
+		RenderSystem.defaultBlendFunc();
+		g.setColor(1f, 1f, 1f, ICON_ALPHA);
+		g.blit(tex, x, y, 0, 0, 16, 16, 16, 16);
+		g.setColor(1f, 1f, 1f, 1f);
+		RenderSystem.disableBlend();
 	}
 
 	/**

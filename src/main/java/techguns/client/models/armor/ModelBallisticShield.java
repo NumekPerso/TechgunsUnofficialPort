@@ -33,7 +33,8 @@ public class ModelBallisticShield extends TGModelBase implements IShieldModel {
         this.SideBorder0.addBox(0.0F, 0.0F, 0.0F, 1, 15, 1, 0.0F);
         this.Glass = new TGModelRenderer(this, 0, 17);
         this.Glass.setRotationPoint(-4.0F, -8.0F, -1.8F);
-        this.Glass.addBox(0.0F, 0.0F, 0.0F, 8, 4, 1, 0.0F);
+        //slightly shrunk: the translucent glass faces were coplanar with the borders (z-fighting)
+        this.Glass.addBox(0.0F, 0.0F, 0.0F, 8, 4, 1, -0.01F);
         this.Handle = new TGModelRenderer(this, 16, 20);
         this.Handle.setRotationPoint(-1.0F, -3.0F, -1.0F);
         this.Handle.addBox(0.0F, 0.0F, 0.0F, 2, 6, 6, 0.0F);

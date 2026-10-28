@@ -24,7 +24,8 @@ public class ModelRiotShield extends TGModelBase implements IShieldModel {
         this.SideBorder1.addBox(0.0F, 0.0F, 0.0F, 1, 21, 1, 0.0F);
         this.Plate = new TGModelRenderer(this, 0, 0);
         this.Plate.setRotationPoint(-5.0F, -10.0F, -2.0F);
-        this.Plate.addBox(0.0F, 0.0F, 0.0F, 10, 20, 1, 0.0F);
+        //slightly shrunk: the translucent glass faces were coplanar with the borders (z-fighting)
+        this.Plate.addBox(0.0F, 0.0F, 0.0F, 10, 20, 1, -0.01F);
         this.Handle = new TGModelRenderer(this, 16, 20);
         this.Handle.setRotationPoint(-1.0F, -3.0F, -1.0F);
         this.Handle.addBox(0.0F, 0.0F, 0.0F, 2, 6, 6, 0.0F);

@@ -64,7 +64,8 @@ public class TileEntityItemRendererTGShield extends BlockEntityWithoutLevelRende
 			int index = s.getCurrentCamoIndex(stack);
 
 			if (index >= 0 && index < info.textures.length) {
-				VertexConsumer vc = ItemRenderer.getFoilBufferDirect(buffers, RenderType.entityCutoutNoCull(info.textures[index]), false, stack.hasFoil());
+				//translucent: the visors / windows of the shield textures are half transparent (1.12 rendered items with blending)
+				VertexConsumer vc = ItemRenderer.getFoilBufferDirect(buffers, RenderType.entityTranslucent(info.textures[index]), false, stack.hasFoil());
 				poseStack.pushPose();
 				poseStack.scale(1.0F, -1.0F, -1.0F);
 				info.model.render(poseStack, vc, packedLight, packedOverlay, 0.0625F);

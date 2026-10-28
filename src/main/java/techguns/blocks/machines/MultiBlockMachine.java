@@ -36,7 +36,9 @@ public class MultiBlockMachine<T extends Enum<T> & IMachineType> extends BasicMa
 	public static final DirectionProperty MULTIBLOCK_DIRECTION = HorizontalDirectionalBlock.FACING;
 
 	public MultiBlockMachine(T machineType, Supplier<? extends BlockEntityType<?>> tileType) {
-		this(machineType, tileType, defaultProperties(machineType).noOcclusion());
+		//the formed shapes come from the tile entity: no shape cache (it is computed without the tile and was a full block,
+		//the camera inside the inset reaction chamber parts showed the in-wall overlay), never view blocking / suffocating
+		this(machineType, tileType, defaultProperties(machineType).noOcclusion().dynamicShape().isViewBlocking((s, l, p) -> false).isSuffocating((s, l, p) -> false));
 	}
 
 	public MultiBlockMachine(T machineType, Supplier<? extends BlockEntityType<?>> tileType, BlockBehaviour.Properties properties) {

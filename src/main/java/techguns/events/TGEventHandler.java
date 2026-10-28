@@ -86,7 +86,8 @@ public class TGEventHandler {
 		}
 	}
 
-	@SubscribeEvent
+	//lowest priority: no death effect for a death another handler cancels
+	@SubscribeEvent(priority = EventPriority.LOWEST)
 	public static void onLivingDeathEvent(LivingDeathEvent event) {
 		LivingEntity entity = event.getEntity();
 		if (!entity.level().isClientSide) {

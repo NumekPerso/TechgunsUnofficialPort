@@ -1,23 +1,30 @@
 {
   "parent": "techguns:block/ladder_metal",
+  "display": {
+    "gui": {
+      "rotation": [ 30, 225, 0 ],
+      "translation": [ -3.1, 1.55, 0 ],
+      "scale": [ 0.625, 0.625, 0.625 ]
+    }
+  },
   "overrides": [
     {
       "predicate": {
         "techguns:variant": 1
       },
-      "model": "techguns:block/ladder_shiny"
+      "model": "techguns:item/ladder0_shiny"
     },
     {
       "predicate": {
         "techguns:variant": 2
       },
-      "model": "techguns:block/ladder_rusty"
+      "model": "techguns:item/ladder0_rusty"
     },
     {
       "predicate": {
         "techguns:variant": 3
       },
-      "model": "techguns:block/ladder_carbon"
+      "model": "techguns:item/ladder0_carbon"
     }
   ]
 }

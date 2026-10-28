@@ -1,5 +1,8 @@
 package techguns.entities.npcs;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.annotation.Nullable;
 
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -18,6 +21,9 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import techguns.TGPackets;
 import techguns.TGSounds;
@@ -28,6 +34,8 @@ import techguns.entities.projectiles.EnumBulletFirePos;
 import techguns.entities.projectiles.GenericProjectile;
 import techguns.entities.projectiles.RocketProjectile;
 import techguns.packets.PacketPlaySound;
+import techguns.packets.PacketSpawnParticleOnEntity;
+import techguns.util.EntityCondition;
 import techguns.util.TGSoundCategory;
 
 /**
@@ -61,7 +69,8 @@ public class AttackHelicopter extends GenericFlyingMob {
 		this.goalSelector.addGoal(5, new GenericFlyingMob.AIRandomFly(this));
 		this.goalSelector.addGoal(7, new GenericFlyingMob.AILookAround(this));
 		this.goalSelector.addGoal(7, new AttackHelicopter.AIHelicopterAttack(this));
-		this.targetSelector.addGoal(1, new EntityAIFindEntityNearestPlayer(this));
+		//1.12 searched +-4 blocks vertically: flying TARGET_FLY_HEIGHT blocks above the ground it never found the player
+		this.targetSelector.addGoal(1, new EntityAIFindEntityNearestPlayer(this, TARGET_FLY_HEIGHT * 2));
 	}
 
 	public boolean isAttacking() {
@@ -145,12 +154,75 @@ public class AttackHelicopter extends GenericFlyingMob {
 			this.playSound(TGSounds.HELICOPTER_EXPLODE, 6.0f, 1.0f);
 
 			Techguns.proxy.createFX("HelicopterDeathExplosion", this.level(), this.getX(), this.getY() - 8D, this.getZ(), 0, 0, 0);
+
+			if (!this.level().isClientSide && this.deathLootSource != null) {
+				this.dropDebrisLoot();
+			}
+		} else if (this.deathTime == MAX_DEATH_TIME + 1 && !this.level().isClientSide) {
+			//one tick later: the client knows the item entities now
+			for (ItemEntity item : this.debrisDrops) {
+				if (item.isAlive()) {
+					TGPackets.network.sendToAllAround(new PacketSpawnParticleOnEntity("RocketLauncherTrail", item, 0f, 0f, 0f, false, EntityCondition.AIRBORNE), TGPackets.targetPointAroundEnt(item, 150.0f));
+				}
+			}
+			this.debrisDrops.clear();
 		}
 		//removed a few ticks later than 1.12 so the client reaches MAX_DEATH_TIME (explosion FX) before the removal packet,
 		//the renderer doesn't render it anymore after MAX_DEATH_TIME
 		if (this.deathTime >= MAX_DEATH_TIME + 3 && !this.level().isClientSide) {
 			this.remove(Entity.RemovalReason.KILLED);
 		}
+	}
+
+	/**
+	 * The loot (and experience) of the death is kept until the explosion: dropped on death it fell straight down from
+	 * where the helicopter was hit, it now flies off with the debris of the explosion
+	 */
+	@Nullable
+	protected DamageSource deathLootSource = null;
+	protected int deathLootPlayerTime = 0;
+	@Nullable
+	protected Player deathLootPlayer = null;
+	protected boolean droppingDebrisLoot = false;
+	protected final List<ItemEntity> debrisDrops = new ArrayList<>();
+
+	@Override
+	protected void dropAllDeathLoot(DamageSource source) {
+		if (this.droppingDebrisLoot) {
+			super.dropAllDeathLoot(source);
+		} else {
+			this.deathLootSource = source;
+			this.deathLootPlayerTime = this.lastHurtByPlayerTime;
+			this.deathLootPlayer = this.lastHurtByPlayer;
+		}
+	}
+
+	protected void dropDebrisLoot() {
+		//the "killed by player" loot conditions and the experience need the last player hit (reset while dying)
+		this.lastHurtByPlayerTime = this.deathLootPlayerTime;
+		this.lastHurtByPlayer = this.deathLootPlayer;
+		this.droppingDebrisLoot = true;
+		try {
+			this.dropAllDeathLoot(this.deathLootSource);
+		} finally {
+			this.droppingDebrisLoot = false;
+			this.deathLootSource = null;
+		}
+	}
+
+	@Override
+	@Nullable
+	public ItemEntity spawnAtLocation(ItemStack stack, float offsetY) {
+		ItemEntity item = super.spawnAtLocation(stack, offsetY);
+		if (item != null && this.droppingDebrisLoot) {
+			//center of the explosion FX, thrown outwards like the debris parts
+			item.setPos(this.getX(), this.getY() - 8D, this.getZ());
+			double angle = this.random.nextDouble() * Math.PI * 2.0;
+			double v = 0.35 + this.random.nextDouble() * 0.35;
+			item.setDeltaMovement(Math.cos(angle) * v, 0.4 + this.random.nextDouble() * 0.4, Math.sin(angle) * v);
+			this.debrisDrops.add(item);
+		}
+		return item;
 	}
 
 	static class AIHelicopterAttack extends Goal {
@@ -210,12 +282,14 @@ public class AttackHelicopter extends GenericFlyingMob {
 					}
 
 					GenericProjectile bullet = new GenericProjectile(world, this.parentEntity, 12.0f, 1.0f, 100, 0.05f, 30, 40, 8.0f, 0.25f, false, EnumBulletFirePos.CENTER);
+					aimAt(bullet, entitylivingbase, 1.0f, 8.0f);
 					world.addFreshEntity(bullet);
 
 				} else if (attackTimer == 35) {
 
 					TGPackets.network.sendToAllAround(new PacketPlaySound(TGSounds.ROCKET_FIRE, this.parentEntity, 8.0f, 1.0f, false, false, TGSoundCategory.GUN_FIRE), TGPackets.targetPointAroundEnt(parentEntity, 100.0f));
 					RocketProjectile rocket = new RocketProjectile(world, this.parentEntity, 12.0f, 1.0f, 100, 0.05f, 30, 40, 8.0f, 0.25f, false, this.parentEntity.random.nextBoolean() ? EnumBulletFirePos.LEFT : EnumBulletFirePos.RIGHT, 4.0f, 0.0f);
+					aimAt(rocket, entitylivingbase, 1.0f, 4.0f);
 					world.addFreshEntity(rocket);
 
 				} else if (attackTimer > 35) {
@@ -226,6 +300,18 @@ public class AttackHelicopter extends GenericFlyingMob {
 			}
 
 			this.parentEntity.setAttacking(this.attackTimer > 10);
+		}
+
+		/**
+		 * The projectiles were fired along the helicopter pitch, which only follows the target loosely (the model
+		 * tilts with it): aim them at the middle of the target instead, same velocity as GenericProjectile (1.5 * speed)
+		 */
+		protected static void aimAt(GenericProjectile proj, LivingEntity target, float speed, float inaccuracy) {
+			double dx = target.getX() - proj.getX();
+			double dy = target.getY() + target.getBbHeight() * 0.5 - proj.getY();
+			double dz = target.getZ() - proj.getZ();
+			proj.shoot(dx, dy, dz, 1.5f * speed, inaccuracy);
+			proj.setDeltaMovement(proj.motionX, proj.motionY, proj.motionZ);
 		}
 	}
 

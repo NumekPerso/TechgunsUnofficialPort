@@ -169,7 +169,12 @@ public class MilitaryCamp {
 			}
 		}
 
-		//Set fence
+		//Set Roads & Subsegments. 1.12 placed the fence first: the roads and buildings flatten the terrain again
+		//afterwards and the fence was left floating, it is now placed on the final ground (then the gates are cut out)
+		this.rootSegment.setBlocks(world, rnd);
+
+		//Set fence (the loop moves posY along the ground, the spawn positions of the roads are relative to its value before)
+		int roadsPosY = posY;
 		BlockState outerfencestate = MBlockRegister.MILBASE_FENCE.getState();
 		for (int k = 1; k < outerFenceHeight + 1; k++) {
 			for (int i = 0; i < sizeX; i++) {
@@ -190,8 +195,13 @@ public class MilitaryCamp {
 			}
 		}
 
-		//Set Roads & Subsegments
-		this.rootSegment.setBlocks(world, rnd);
+		posY = roadsPosY;
+
+		this.fencePlaced = true;
+		for (int[] g : this.pendingGates) {
+			this.setFenceGateBlocks(world, g[0], g[1], g[2], g[3], g[4], g[5], g[6] != 0);
+		}
+		this.pendingGates.clear();
 
 		initCampFlagEntity(world);
 	}
@@ -273,7 +283,15 @@ public class MilitaryCamp {
 		spawnPositions.add(spawnZ - posZ);
 	}
 
+	/** the gates are cut out of the fence once it is placed (after the roads, see setBlocks) */
+	protected boolean fencePlaced = false;
+	protected final List<int[]> pendingGates = new ArrayList<>();
+
 	public void setFenceGateBlocks(LevelAccessor world, int x, int y, int z, int roadWidth, int length, int height, boolean alignment) {
+		if (!this.fencePlaced) {
+			this.pendingGates.add(new int[] { x, y, z, roadWidth, length, height, alignment ? 1 : 0 });
+			return;
+		}
 		int a, b;
 		MutableBlockPos p = new MutableBlockPos();
 

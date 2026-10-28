@@ -53,6 +53,11 @@ public class TFGProjectile extends GenericProjectile {
 		this.explode();
 	}
 
+	@Override
+	protected void onStoppedInWater() {
+		this.explode();
+	}
+
 	protected void explode() {
 		if (!this.level().isClientSide) {
 			float exp_dmgMax = this.damage * 0.66f * size;

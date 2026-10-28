@@ -11,6 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ResultContainer;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -41,6 +42,8 @@ public class UpgradeBenchContainer extends OwnedTileContainer {
 	public static final int SLOT_OUTPUT_X = 116;
 
 	protected static final int HIGHEST_SLOT = 2;
+	/** inputs + output, 36 player inventory slots, then the 4 armor slots (helmet first) */
+	protected static final int ARMOR_START = HIGHEST_SLOT + 1 + 36;
 
 	public UpgradeBenchContainer(int id, Inventory player, FriendlyByteBuf buf) {
 		this(id, player, TGBaseContainer.<UpgradeBenchTileEnt>getClientTile(player, buf));
@@ -228,23 +231,31 @@ public class UpgradeBenchContainer extends OwnedTileContainer {
 					if (id == HIGHEST_SLOT && !slot.mayPickup(ply)) {
 						return ItemStack.EMPTY;
 					}
-					if (!this.moveItemStackTo(stack1, HIGHEST_SLOT + 1, MAXSLOTS, false)) {
-						return ItemStack.EMPTY;
+					//armor: equip it if its armor slot is free, else player inventory
+					int armorSlot = this.getArmorSlotFor(stack1);
+					if (armorSlot < 0 || !this.moveItemStackTo(stack1, armorSlot, armorSlot + 1, false)) {
+						if (!this.moveItemStackTo(stack1, HIGHEST_SLOT + 1, ARMOR_START, false)) {
+							return ItemStack.EMPTY;
+						}
 					}
 					slot.onQuickCraft(stack1, stack);
 				} else if (id > HIGHEST_SLOT && id < MAXSLOTS) {
 
 					int validslot = this.getValidSlotForItemInInventory(stack1);
-					if (validslot >= 0) {
-
-						if (!this.moveItemStackTo(stack1, validslot, validslot + 1, false)) {
+					boolean moved = validslot >= 0 && this.moveItemStackTo(stack1, validslot, validslot + 1, false);
+					if (!moved) {
+						if (id < ARMOR_START) {
+							//player inventory: quick equip armor
+							int armorSlot = this.getArmorSlotFor(stack1);
+							if (armorSlot < 0 || !this.moveItemStackTo(stack1, armorSlot, armorSlot + 1, false)) {
+								return ItemStack.EMPTY;
+							}
+						} else if (!this.moveItemStackTo(stack1, HIGHEST_SLOT + 1, ARMOR_START, false)) {
+							//armor slot: player inventory
 							return ItemStack.EMPTY;
 						}
-						slot.onQuickCraft(stack1, stack);
-
-					} else {
-						return ItemStack.EMPTY;
 					}
+					slot.onQuickCraft(stack1, stack);
 
 				}
 
@@ -263,6 +274,16 @@ public class UpgradeBenchContainer extends OwnedTileContainer {
 		}
 
 		return stack;
+	}
+
+	/**
+	 * Container slot of the armor slot the item can be equipped in, -1 if it is no armor
+	 */
+	protected int getArmorSlotFor(ItemStack stack) {
+		if (stack.getItem() instanceof ArmorItem armor) {
+			return ARMOR_START + getArmorIntFromEntityEquipmentSlot(armor.getEquipmentSlot());
+		}
+		return -1;
 	}
 
 	protected int getValidSlotForItemInInventory(ItemStack stack1) {

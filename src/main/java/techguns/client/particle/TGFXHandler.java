@@ -312,6 +312,14 @@ public class TGFXHandler {
 	 * Called from RenderLevelStageEvent (stage AFTER_PARTICLES), renders the world particles (1.12: RenderWorldLastEvent)
 	 */
 	public static void renderWorldParticles(RenderLevelStageEvent event) {
+		renderWorldParticles(event, TGParticleManager.RenderPass.ALL);
+	}
+
+	/**
+	 * Stage AFTER_BLOCK_ENTITIES (before the translucent terrain): pass BEHIND_WATER, stage AFTER_PARTICLES: pass NORMAL.
+	 * With the fabulous transparency everything is rendered after the particles (ALL).
+	 */
+	public static void renderWorldParticles(RenderLevelStageEvent event, TGParticleManager.RenderPass pass) {
 		if (Minecraft.getInstance().level == null) {
 			return;
 		}
@@ -321,7 +329,7 @@ public class TGFXHandler {
 		//effects attached to the first person gun must match the fixed FOV of the held item (applied per vertex in TGParticle)
 		FirstPersonFXCorrection.particleK = FirstPersonFXCorrection.computeK();
 		try {
-			particleManager.renderParticles(event.getCamera(), event.getPoseStack(), worldBufferSource, event.getFrustum(), event.getPartialTick());
+			particleManager.renderParticles(event.getCamera(), event.getPoseStack(), worldBufferSource, event.getFrustum(), event.getPartialTick(), pass);
 		} finally {
 			FirstPersonFXCorrection.particleK = 1.0f;
 		}
@@ -333,6 +341,11 @@ public class TGFXHandler {
 	 */
 	public static void onRenderLivingPre(RenderLivingEvent.Pre<?, ?> event) {
 		DeathType dt = getEntityDeathType(event.getEntity());
+		//never hide a living entity: the map keys compare entity ids (Entity.equals), the respawned player keeps the id of the
+		//dead one and was invisible. The death type also stays set if the death was cancelled.
+		if (dt != DeathType.DEFAULT && !event.getEntity().isDeadOrDying()) {
+			return;
+		}
 		switch (dt) {
 		case GORE:
 			event.setCanceled(true);

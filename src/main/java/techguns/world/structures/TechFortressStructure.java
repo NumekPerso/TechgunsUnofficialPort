@@ -7,7 +7,7 @@ import techguns.world.dungeon.presets.IDungeonPreset;
 public class TechFortressStructure extends DungeonStructure {
 
 	public TechFortressStructure() {
-		this.heightdiffLimit = 10;
+		this.heightdiffLimit = 6; //1.12: 10
 	}
 
 	@Override

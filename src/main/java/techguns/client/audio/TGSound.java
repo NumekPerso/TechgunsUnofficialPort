@@ -5,9 +5,8 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.phys.Vec2;
+import net.minecraft.util.Mth;
 import techguns.util.EntityCondition;
-import techguns.util.MathUtil;
 import techguns.util.TGSoundCategory;
 
 public class TGSound extends AbstractTickableSoundInstance {
@@ -62,10 +61,14 @@ public class TGSound extends AbstractTickableSoundInstance {
 		this.z = posz;
 	}
 
+	/**
+	 * 1 block in front of the entity. 1.12 used polarOffsetXZ (cos(yaw), sin(yaw)): 1 block to the left of the entity,
+	 * the own gun sounds were only heard on one side.
+	 */
 	protected void applyGunPosition() {
-		Vec2 pos = MathUtil.polarOffsetXZ((float) x, (float) z, 1.0f, (float) (((LivingEntity) entity).getYHeadRot() * Math.PI / 180.0f));
-		this.x = pos.x;
-		this.z = pos.y;
+		float yaw = (float) (((LivingEntity) entity).getYHeadRot() * Math.PI / 180.0f);
+		this.x = this.x - Mth.sin(yaw);
+		this.z = this.z + Mth.cos(yaw);
 		this.y = this.y + (entity.getBbHeight() * 0.5f);
 	}
 

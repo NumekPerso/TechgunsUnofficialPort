@@ -553,6 +553,13 @@
       "techguns:items/jetpack_stop_c"
     ]
   },
+  "jetpack.end": {
+    "sounds": [
+      "techguns:items/jetpack_stop_a",
+      "techguns:items/jetpack_stop_b",
+      "techguns:items/jetpack_stop_c"
+    ]
+  },
   "tntcharge.plant": {
     "sounds": [
       "techguns:effects/democharge_plant"
@@ -1038,13 +1045,18 @@
   "guns.shishkebabfire": {
     "sounds": [
       "techguns:guns/shishkebab_swing_a",
-      "techguns:guns/shishkebap_swing_b",
-      "techguns:guns/shishkebap_swing_c"
+      "techguns:guns/shishkebab_swing_b",
+      "techguns:guns/shishkebab_swing_c"
     ]
   },
   "guns.shishkebabreload": {
     "sounds": [
       "techguns:guns/shishkebab_reload"
+    ]
+  },
+  "guns.cyberdemonblasterreload": {
+    "sounds": [
+      "techguns:guns/lasergun_reload"
     ]
   },
   "blocks.techdoor.open": {

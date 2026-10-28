@@ -44,7 +44,14 @@ public class Grenade40mmProjectile extends GrenadeProjectile {
 		@Override
 		public Grenade40mmProjectile createProjectile(GenericGun gun, Level world, LivingEntity p, float damage, float speed, int TTL, float spread, float dmgDropStart,
 				float dmgDropEnd, float dmgMin, float penetration, boolean blockdamage, EnumBulletFirePos firePos, float radius, double gravity) {
-			return new Grenade40mmProjectile(world, p, damage, speed, TTL, spread, dmgDropStart, dmgDropEnd, dmgMin, penetration, blockdamage, firePos, gravity, radius, 2);
+			return new Grenade40mmProjectile(world, p, damage, speed, TTL, spread, dmgDropStart, dmgDropEnd, dmgMin, penetration, blockdamage, firePos, gravity, radius, MAX_BOUNCES);
+		}
+
+		protected static final int MAX_BOUNCES = 2;
+
+		@Override
+		public int getMaxBounces() {
+			return MAX_BOUNCES;
 		}
 
 		@Override

@@ -1,6 +1,9 @@
 package techguns.items.guns;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
@@ -8,8 +11,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
 import techguns.TGPackets;
 import techguns.TGSounds;
+import techguns.Techguns;
 import techguns.api.damagesystem.DamageType;
 import techguns.damagesystem.TGDamageSource;
 import techguns.deatheffects.EntityDeathUtils.DeathType;
@@ -17,6 +23,8 @@ import techguns.packets.PacketNotifyAmbientEffectChange;
 import techguns.packets.PacketSpawnParticle;
 
 public class Shishkebap extends GenericGunMeleeCharge {
+
+	public static final TagKey<Block> MINEABLE = BlockTags.create(new ResourceLocation(Techguns.MODID, "mineable/shishkebap"));
 
 	@SuppressWarnings("rawtypes")
 	public Shishkebap(String name, ChargedProjectileSelector projectile_selector, boolean semiAuto, int minFiretime,
@@ -80,6 +88,26 @@ public class Shishkebap extends GenericGunMeleeCharge {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level worldIn, Player player, InteractionHand handIn) {
 		return InteractionResultHolder.pass(player.getItemInHand(handIn));
+	}
+
+	/**
+	 * 1.12 bricks had no harvest tool, every tool was effective on them and the Shishkebap cut through them. In 1.20 they
+	 * are mineable with pickaxe only: the blocks of the tag stay effective and harvestable (with fuel).
+	 */
+	@Override
+	public boolean isEffectiveToolForState(ItemStack stack, BlockState state) {
+		if (state.is(MINEABLE) && this.getCurrentAmmo(stack) >= this.getMiningAmmoConsumption()) {
+			return true;
+		}
+		return super.isEffectiveToolForState(stack, state);
+	}
+
+	@Override
+	public boolean canHarvestWithTool(ItemStack stack, BlockState state) {
+		if (state.is(MINEABLE) && this.getCurrentAmmo(stack) >= this.getMiningAmmoConsumption()) {
+			return true;
+		}
+		return super.canHarvestWithTool(stack, state);
 	}
 
 	@Override

@@ -19,6 +19,7 @@ import techguns.api.damagesystem.DamageType;
 import techguns.capabilities.TGExtendedPlayer;
 import techguns.damagesystem.DamageSystem;
 import techguns.gui.player.tabs.TGPlayerTab;
+import techguns.gui.widgets.ITGSlotBackground;
 import techguns.items.armors.GenericArmor;
 import techguns.util.TextUtil;
 
@@ -198,7 +199,7 @@ public class TGPlayerInventoryGui extends AbstractContainerScreen<TGPlayerInvent
 					tex = SlotTG.FOODSLOT_TEX;
 				}
 				if (tex != null) {
-					g.blit(tex, k + slot.x, l + slot.y, 0, 0, 16, 16, 16, 16);
+					ITGSlotBackground.drawIcon(g, tex, k + slot.x, l + slot.y);
 				}
 			}
 		}

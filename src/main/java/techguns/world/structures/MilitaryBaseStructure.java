@@ -19,9 +19,12 @@ public class MilitaryBaseStructure extends WorldgenStructure {
 		//NOT NEEDED, DUMMY
 	}
 
+	/** 1.12: 5 blocks height difference, sampled every 8 blocks: camps were spawned on hillsides */
+	protected static final int HEIGHT_DIFF_LIMIT = 3;
+
 	@Override
 	protected int getStep() {
-		return 8;
+		return 4;
 	}
 
 	@Override
@@ -29,7 +32,7 @@ public class MilitaryBaseStructure extends WorldgenStructure {
 		int x = chunkX * 16;
 		int z = chunkZ * 16;
 
-		int y = ctx.getValidSpawnYArea(x, z, sizeX, sizeZ, 5, getStep());
+		int y = ctx.getValidSpawnYArea(x, z, sizeX, sizeZ, HEIGHT_DIFF_LIMIT, getStep());
 
 		if (y > 0) {
 			return new TGSpawnData(x, y, z, sizeX, sizeY, sizeZ, 0);
@@ -55,7 +58,7 @@ public class MilitaryBaseStructure extends WorldgenStructure {
 	public void generate(LevelAccessor world, TGSpawnData d, Random rnd) {
 		StructureBlockUtils.removeJunkInArea(world, d.x - 1, d.z - 1, d.sizeX + 2, d.sizeZ + 2);
 
-		MilitaryCamp camp = new MilitaryCamp(4, rnd);
+		MilitaryCamp camp = new MilitaryCamp(2, rnd); //1.12: 4
 		camp.colorType = d.color;
 		camp.init(d.x, d.y, d.z, d.sizeX, d.sizeZ);
 		camp.setBlocks(world, rnd);

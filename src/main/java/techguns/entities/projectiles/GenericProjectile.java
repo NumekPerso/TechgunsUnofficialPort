@@ -193,6 +193,9 @@ public class GenericProjectile extends Entity implements IEntityAdditionalSpawnD
 	public void tick() {
 		if (!this.posInitialized && !this.level().isClientSide) {
 			this.initStartPos();
+			if (this.hitBlockBetweenShooterAndSpawn()) {
+				return;
+			}
 		}
 		this.xo = this.getX();
 		this.yo = this.getY();
@@ -279,7 +282,21 @@ public class GenericProjectile extends Entity implements IEntityAdditionalSpawnD
 
 		if (this.ticksToLive <= 0) {
 			this.discard();
+		} else if (!this.level().isClientSide && this.isAlive() && this.gravity == 0 && this.isInWater()
+				&& (this.motionX * this.motionX + this.motionY * this.motionY + this.motionZ * this.motionZ) < STOPPED_IN_WATER_SPEED_SQ) {
+			this.onStoppedInWater();
 		}
+	}
+
+	/** the water drag (0.85 per tick) stops the projectiles after a few blocks */
+	protected static final double STOPPED_IN_WATER_SPEED_SQ = 0.05 * 0.05;
+
+	/**
+	 * The projectile was stopped by the water drag (1.12 kept it until the end of its lifetime). Explosive projectiles
+	 * explode instead of vanishing silently.
+	 */
+	protected void onStoppedInWater() {
+		this.discard();
 	}
 
 	protected float inWaterUpdateBehaviour(float f1) {
@@ -303,6 +320,33 @@ public class GenericProjectile extends Entity implements IEntityAdditionalSpawnD
 		this.startY = this.getY();
 		this.startZ = this.getZ();
 		this.posInitialized = true;
+	}
+
+	/**
+	 * The projectile spawns offset to the side and shifted forward (gun forward offset): against a wall it could start
+	 * behind a thin block (pane, bars, fence, door...) and never trace through it. Traces from the shooter's eyes to the
+	 * spawn position and hits the first block on the way, return true if a block was hit.
+	 */
+	protected boolean hitBlockBetweenShooterAndSpawn() {
+		if (this.shooter == null) {
+			return false;
+		}
+		Vec3 eyes = this.shooter.getEyePosition();
+		Vec3 spawn = this.position();
+		if (eyes.distanceToSqr(spawn) < 1.0E-6) {
+			return false;
+		}
+		BlockHitResult hit = this.level().clip(new ClipContext(eyes, spawn, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE, this));
+		if (hit.getType() != HitResult.Type.BLOCK) {
+			return false;
+		}
+		//move back to the hit position so the impact effects, explosions and bounces happen in front of the block
+		Vec3 back = spawn.subtract(eyes).normalize().scale(0.05);
+		Vec3 pos = hit.getLocation().subtract(back);
+		this.setPos(pos.x, pos.y, pos.z);
+		this.initStartPos();
+		this.onHit(hit);
+		return true;
 	}
 
 	@Nullable

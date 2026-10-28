@@ -32,6 +32,7 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -263,6 +264,16 @@ public class BasicMachine<T extends Enum<T> & IMachineType> extends BaseEntityBl
 			}
 		}
 		return InteractionResult.sidedSuccess(world.isClientSide);
+	}
+
+	/**
+	 * Spectators open the menu provider of the block with the vanilla openMenu (no block position for the client menu,
+	 * the client crashed), the Techguns menus are only opened by use().
+	 */
+	@Override
+	@Nullable
+	public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+		return null;
 	}
 
 	/**

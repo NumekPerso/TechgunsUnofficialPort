@@ -29,7 +29,8 @@ public class ModelAdvancedShield extends TGModelBase implements IShieldModel {
         this.setRotateAngle(BottomBorder, 0.39269908169872414F, 0.0F, 0.0F);
         this.Glass = new TGModelRenderer(this, 26, 17);
         this.Glass.setRotationPoint(-4.0F, -10.5F, -1.8F);
-        this.Glass.addBox(0.0F, 0.0F, 0.0F, 8, 7, 1, 0.0F);
+        //slightly shrunk: the translucent glass faces were coplanar with the borders (z-fighting)
+        this.Glass.addBox(0.0F, 0.0F, 0.0F, 8, 7, 1, -0.01F);
         this.SideBorder3 = new TGModelRenderer(this, 29, 0);
         this.SideBorder3.setRotationPoint(4.0F, -11.0F, -2.0F);
         this.SideBorder3.addBox(0.0F, 0.0F, 0.0F, 2, 7, 1, 0.0F);

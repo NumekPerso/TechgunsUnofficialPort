@@ -24,6 +24,7 @@ import techguns.entities.npcs.NPCTurret;
 import techguns.gui.ButtonConstants;
 import techguns.gui.containers.TurretContainer;
 import techguns.items.guns.GenericGun;
+import techguns.items.guns.ammo.AmmoType;
 import techguns.tileentities.operation.ItemStackHandlerPlus;
 import techguns.util.ItemUtil;
 
@@ -88,7 +89,8 @@ public class TurretTileEnt extends BasicPoweredTileEnt {
 				} else if (slot == SLOT_ARMOR) {
 					return stack.getItem() instanceof ITGSpecialSlot && ((ITGSpecialSlot) stack.getItem()).getSlot(stack) == TGSlotType.TURRETARMOR;
 				} else if (slot >= SLOT_INPUT1 && slot < SLOT_INPUT1 + INPUTS_SIZE) {
-					return true;
+					//1.12 accepted anything, only gun ammo now
+					return AmmoType.isAmmo(stack);
 				}
 				return false;
 			}

@@ -6,6 +6,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ComputeFovModifierEvent;
@@ -23,6 +24,7 @@ import techguns.api.guns.GunManager;
 import techguns.api.guns.IGenericGun;
 import techguns.capabilities.TGExtendedPlayer;
 import techguns.client.particle.TGFXHandler;
+import techguns.client.particle.TGParticleManager;
 import techguns.client.render.ItemRenderHack;
 import techguns.items.guns.GenericGun;
 import techguns.packets.PacketShootGun;
@@ -39,6 +41,8 @@ public class TGClientEvents {
 
 	private static boolean lastAttackDown = false;
 	private static boolean lastUseDown = false;
+	private static int lastSelectedSlot = -1;
+	private static Item lastMainHandItem = null;
 
 	protected static boolean isGunShootingWithLeftClick(ItemStack stack) {
 		return !stack.isEmpty() && stack.getItem() instanceof IGenericGun && ((IGenericGun) stack.getItem()).isShootWithLeftClick();
@@ -184,6 +188,16 @@ public class TGClientEvents {
 				cp.keyFirePressedOffhand = false;
 			}
 
+			//Reset lock when switching to another slot / item: the lock only decays while aiming (GuidedMissileLauncher.onUseTick),
+			//it stayed frozen and the lock crosshair came back with the gun
+			int selected = event.player.getInventory().selected;
+			if (selected != lastSelectedSlot || stack.getItem() != lastMainHandItem) {
+				lastSelectedSlot = selected;
+				lastMainHandItem = stack.getItem();
+				props.lockOnEntity = null;
+				props.lockOnTicks = -1;
+			}
+
 			//Reset lock if out of ammo
 			if (!stack.isEmpty() && stack.getItem() instanceof GenericGun g && g.getLockOnTicks() > 0) {
 				if (g.getAmmoLeft(stack) <= 0 && props.lockOnEntity != null) {
@@ -253,8 +267,11 @@ public class TGClientEvents {
 
 	@SubscribeEvent
 	public static void onRenderLevelStage(RenderLevelStageEvent event) {
-		if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_PARTICLES) {
-			TGFXHandler.renderWorldParticles(event);
+		boolean fabulous = Minecraft.useShaderTransparency();
+		if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_BLOCK_ENTITIES && !fabulous) {
+			TGFXHandler.renderWorldParticles(event, TGParticleManager.RenderPass.BEHIND_WATER);
+		} else if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_PARTICLES) {
+			TGFXHandler.renderWorldParticles(event, fabulous ? TGParticleManager.RenderPass.ALL : TGParticleManager.RenderPass.NORMAL);
 		}
 	}
 }

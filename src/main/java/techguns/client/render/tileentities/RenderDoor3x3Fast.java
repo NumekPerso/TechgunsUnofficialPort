@@ -5,12 +5,15 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.block.ModelBlockRenderer;
+import net.minecraft.client.renderer.block.model.BakedQuad;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.event.ModelEvent;
@@ -74,10 +77,29 @@ public class RenderDoor3x3Fast implements BlockEntityRenderer<Door3x3TileEntity>
 				poseStack.translate(0, 0, 1);
 				poseStack.mulPose(Axis.YP.rotationDegrees(90));
 			}
-			ModelBlockRenderer renderer = Minecraft.getInstance().getBlockRenderer().getModelRenderer();
-			renderer.renderModel(poseStack.last(), buffer, state, model, 1f, 1f, 1f, light, overlay, ModelData.EMPTY, RenderType.cutout());
+			//ModelBlockRenderer.renderModel draws without the directional face shading of the chunk renderer: the moving
+			//parts were brighter than the static door, apply the shade of each face (rotated with the door)
+			ClientLevel level = Minecraft.getInstance().level;
+			PoseStack.Pose pose = poseStack.last();
+			RandomSource rand = RandomSource.create();
+			for (Direction side : SIDES) {
+				rand.setSeed(42L);
+				for (BakedQuad quad : model.getQuads(state, side, rand, ModelData.EMPTY, RenderType.cutout())) {
+					float shade = 1f;
+					if (quad.isShade() && level != null) {
+						Direction dir = quad.getDirection();
+						if (zplane && dir.getAxis().isHorizontal()) {
+							dir = dir.getCounterClockWise();
+						}
+						shade = level.getShade(dir, true);
+					}
+					buffer.putBulkData(pose, quad, shade, shade, shade, light, overlay);
+				}
+			}
 			poseStack.popPose();
 		}
+
+		private static final Direction[] SIDES = { Direction.DOWN, Direction.UP, Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST, null };
 	}
 
 	@Override
