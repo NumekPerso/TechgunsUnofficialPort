@@ -23,13 +23,13 @@
       "predicate": {
         "techguns:variant": 4
       },
-      "model": "techguns:block/concrete_brown_pipes"
+      "model": "techguns:item/variants/concrete_brown_pipes"
     },
     {
       "predicate": {
         "techguns:variant": 5
       },
-      "model": "techguns:block/concrete_brown_light_scaff"
+      "model": "techguns:item/variants/concrete_brown_light_scaff"
     }
   ]
 }

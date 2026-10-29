@@ -35,25 +35,25 @@
       "predicate": {
         "techguns:variant": 6
       },
-      "model": "techguns:block/nethermetal_border_red"
+      "model": "techguns:item/variants/nethermetal_border_red"
     },
     {
       "predicate": {
         "techguns:variant": 7
       },
-      "model": "techguns:block/nethermetal_plate_black"
+      "model": "techguns:item/variants/nethermetal_plate_black"
     },
     {
       "predicate": {
         "techguns:variant": 8
       },
-      "model": "techguns:block/nethermetal_plate_red"
+      "model": "techguns:item/variants/nethermetal_plate_red"
     },
     {
       "predicate": {
         "techguns:variant": 9
       },
-      "model": "techguns:block/nethermetal_border_lava"
+      "model": "techguns:item/variants/nethermetal_border_lava"
     }
   ]
 }

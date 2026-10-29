@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "techguns:blocks/noctm/concrete_brown_pipes"
+  }
+}

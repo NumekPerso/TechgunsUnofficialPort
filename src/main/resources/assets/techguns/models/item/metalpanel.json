@@ -1,47 +1,47 @@
 {
-  "parent": "techguns:block/container_red",
+  "parent": "techguns:item/variants/container_red",
   "overrides": [
     {
       "predicate": {
         "techguns:variant": 1
       },
-      "model": "techguns:block/container_green"
+      "model": "techguns:item/variants/container_green"
     },
     {
       "predicate": {
         "techguns:variant": 2
       },
-      "model": "techguns:block/container_blue"
+      "model": "techguns:item/variants/container_blue"
     },
     {
       "predicate": {
         "techguns:variant": 3
       },
-      "model": "techguns:block/container_orange"
+      "model": "techguns:item/variants/container_orange"
     },
     {
       "predicate": {
         "techguns:variant": 4
       },
-      "model": "techguns:block/panel_large_border"
+      "model": "techguns:item/variants/panel_large_border"
     },
     {
       "predicate": {
         "techguns:variant": 5
       },
-      "model": "techguns:block/steelframe_blue"
+      "model": "techguns:item/variants/steelframe_blue"
     },
     {
       "predicate": {
         "techguns:variant": 6
       },
-      "model": "techguns:block/steelframe_dark"
+      "model": "techguns:item/variants/steelframe_dark"
     },
     {
       "predicate": {
         "techguns:variant": 7
       },
-      "model": "techguns:block/steelframe_scaffold"
+      "model": "techguns:item/variants/steelframe_scaffold"
     }
   ]
 }
